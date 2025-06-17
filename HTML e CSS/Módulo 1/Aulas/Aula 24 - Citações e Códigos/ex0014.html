@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citações e Códigos</title>
+</head>
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 12pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 23 - Formatações adicionais em HTML/ex0013.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 23 - Formatações adicionais em HTML</a>
+        <a style="font-size: 12pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 25 - Listas OL , UL e Definição/ex0015.html">Aula 25 - Listas OL, UL, e Definição&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt;</span></a>
+    </div>
+
+     <h1>Outras formatações</h1>
+
+    <h2>Código-fonte</h2>
+
+    <!-- Utilizamos "code" para fazer monoespaçamentos entre as letras.-->
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em Linguagem JavaScript.</p>
+
+    <!-- Para pularmos de linha e o código seguir essa lógica de quebra linha podemos utilizar o comando "pre".-->
+
+    <!-- Dica: Para avançar com um código de várias linhas; Selecione o código inteiro e aperte a tecla "TAB". Para voltar com um código de várias linhas; Selecione o código inteiro e aperte de comando "SHIFT + TAB". -->
+
+    <pre>
+
+        <code>
+
+            num = int(input('Digite um número: '))
+            if num % 2 == 0:
+                print(f'O número {num} é PAR!')
+            else:
+                print(f'O número {num} é ÍMPAR!')
+            print('Fim do Progama!')
+
+        </code>
+
+    </pre>
+
+    <h2>Citações</h2>
+
+    <!-- A forma correta de por aspas em um código é usar a TAG "q" .-->
+    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido.</q></p>
+
+    <h2>Citações completas</h2>
+
+    <p>Segundo Maurício Samy Silva no seu livro Construindo Sites com CSS e (X)HTML.</p>
+
+    <!-- Para usar uma citação em bloco de um determinado autor por exemplo use a TAG "blockquote", e para citar um endereço use o complemento "cite" no "blockquote".-->
+    <blockquote cite="https://www.google.com.br/books/edition/HTML_CSS_and_JavaScript_All_in_One/vF1-DwAAQBAJ?hl=pt-BR&gbpv=1&dq=HTML&printsec=frontcover">
+
+        <q>Para adquirir um site você não precisa de ferrramentas de edição...</q>
+
+    </blockquote>
+
+    <h2>Abreviações</h2>
+
+    <!-- Para definir abreviações utilize a TAG "abbr".-->
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p>
+    
+    <h2>Texto invertido</h2>
+    
+    <!-- Para invertir um texto utilize a TAG "bdo" e coloque seu DIR como "rtl".-->
+    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELAY</title>
+    <style>
+
+        .caixa {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.315);
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            left: 40px;
+            top: 150px;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>DELAY</h1>
+
+    <div id="caixa" class="caixa">
+
+        <h3>CFB Cursos</h3>
+
+        <p>Curso de jQuery</p>
+
+    </div>
+
+    <button id="btn_aumentar">Aumentar</button>
+
+    <button id="btn_diminuir">Diminuir</button>
+
+    <button id="btn_visibilidade">Mostrar / Ocultar</button>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("#btn_aumentar").on({
+
+            click:() => {
+
+                $("#caixa").delay(2000).animate({width: '500px'}, {duration: 1500, complete:()=>{
+                    window.alert('Processo concluído com sucesso!')
+                }})
+
+            }
+
+        })
+        
+        $("#btn_diminuir").on({
+
+            click:() => {
+
+                $("#caixa").delay().animate({width: '200px'}, {duration: 1500, complete:()=>{
+                    window.alert('Processo concluído com sucesso!')
+                }})
+
+            }
+
+        })
+        
+        $("#btn_visibilidade").on({
+
+            click:() => {
+
+                $("#caixa").delay(2000).animate({opacity: 'toggle'}, {duration: 1500, complete:()=>{
+                    window.alert('Processo concluído com sucesso!')
+                }})
+
+            }
+
+        })
+
+    </script>
+    
+</body>
+</html>

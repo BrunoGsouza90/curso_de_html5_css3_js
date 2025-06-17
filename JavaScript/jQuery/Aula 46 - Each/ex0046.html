@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Each</title>
+
+</head>
+<body>
+
+    <h1>Each</h1>
+
+    <div class="menu">
+        
+        <button id="btn_each">Função each()</button>
+    
+    </div>
+
+    <p>CFB Cursos</p>
+    <p>Curso de jQuery</p>
+    <p>Função each()</p>
+    <p>cfbcursos.com.br</p>
+    <p>youtube.com/cfbcursos</p>
+
+    <!-- Aqui estamos fazendo a chamada do jQuery. -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("#btn_each").click(() => {
+
+            $("p").each((posicao, evento) => {
+
+                window.alert(`Elemento ${posicao} => ${$(evento).html()}.`)
+
+            })
+
+        })
+
+    </script>
+    
+</body>
+</html>

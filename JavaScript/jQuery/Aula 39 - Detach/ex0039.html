@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detach</title>
+
+    <style>
+
+        .caixa {
+
+            background-color: white;
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0px 0px 0px;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+
+        }
+
+        .subcaixa {
+
+            width: 100px;
+            height: 100px;
+            margin: 10px 0px 10px 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            border: 3px solid black;
+            background-color: lightcoral;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Detach</h1>
+
+    <button id="btnDesanexar">Desanexar</button>
+
+    <div id="caixa1" class="caixa">
+
+        <div id="elemento1" class="subcaixa">
+
+            <p>1</p>
+
+        </div>
+
+        <div id="elemento2" class="subcaixa">
+
+            <p>2</p>
+
+        </div>
+
+        <div id="elemento3" class="subcaixa">
+
+            <p>3</p>
+
+        </div>
+
+        <div id="elemento4" class="subcaixa">
+
+            <p>4</p>
+
+        </div>
+
+    </div>
+
+    <div id="caixa2" class="caixa">
+
+
+
+    </div>
+
+    <!-- Aqui estamos fazendo a chamada do jQuery. -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("#btnDesanexar").click(() => {
+
+            let numero = window.prompt('Digite o elemento de 1 ao 4:')
+
+            let numeros = [1, 2, 3, 4]
+
+            if(!numeros.includes(parseInt(numero))){
+
+                window.alert('O número não está entre 1 e 4')
+
+            } else {
+
+                if($(`#elemento${numero}`).parent().attr("id") == 'caixa1'){
+
+                    let elemento = $(`#elemento${numero}`).detach()
+
+                    $("#caixa2").append(elemento)
+
+                } else {
+
+                    let elemento = $(`#elemento${numero}`).detach()
+
+                    $("#caixa1").append(elemento)
+
+                }
+
+            }
+
+        })
+
+    </script>
+    
+</body>
+</html>

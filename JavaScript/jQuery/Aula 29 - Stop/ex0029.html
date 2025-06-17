@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop</title>
+    <style>
+
+        .caixa {
+
+            background-color: red;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.418);
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.384);
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0px;
+            top: 120px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Stop</h1>
+
+    <div>
+
+        <button id="btnAnimar">Animar</button>
+
+        <button id="btnProxima">Próxima</button>
+
+        <button id="btnParar">Parar</button>
+
+        <button id="btnFim">Fim</button>
+
+    </div>
+
+    <div id="caixa" class="caixa"></div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $('#btnAnimar').click(() => {
+
+            $('#caixa').animate({left:600}, {duration:2000})
+
+            $('#caixa').animate({top:400}, {duration:2000})
+
+            $('#caixa').animate({left:0}, {duration:2000})
+
+            $('#caixa').animate({top:120}, {duration:2000})
+
+        })
+
+        $('#btnProxima').click(() => {
+
+            $('#caixa').stop()
+
+        })
+
+        $('#btnParar').click(() => {
+
+            $('#caixa').stop(true, false)
+
+        })
+
+        $('#btnFim').click(() => {
+
+            $('#caixa').stop(false, true)
+
+        })
+
+    </script>
+
+</body>
+</html>

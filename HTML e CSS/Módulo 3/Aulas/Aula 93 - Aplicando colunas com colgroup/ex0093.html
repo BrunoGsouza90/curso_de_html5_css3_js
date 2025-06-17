@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicando colunas com colgroup</title>
+    <style>
+
+        body {
+
+            font-family: cursive;
+
+        }
+
+        table {
+
+            min-width: 500px;
+            border-collapse: collapse;
+            margin: auto;
+
+        }
+
+        caption {
+
+            border: 1px solid rgba(0, 0, 0, 0.445);
+            padding: 10px;
+            background-color: gray;
+            font-size: 1.3em;
+
+        }
+
+        th {
+
+            background-color: lightgreen;
+
+        }
+
+        th, td {
+
+            border: 1px solid rgba(0, 0, 0, 0.445);
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        col.cnome {
+
+            background-color: chartreuse;
+
+        }
+
+        col.cgrupo {
+
+            background-color: yellow;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 92 - Exemplo de tabela completa/ex0092.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 92 - Exemplo de tabela completa</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 94 - Tabelas Responsivas/ex0094.html">  &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt; Aula 94 - Tabelas Responsivas</span></a>
+    </div>
+
+    <h1>Aplicando colunas com colgroup</h1>
+
+    <table>
+
+        <colgroup>
+
+            <col class="cnome">
+            <col class="cgrupo" span="3">
+            <col>
+            <col>
+
+        </colgroup>
+
+        <caption>Cadastro</caption>
+
+        <thead>
+
+            <tr>
+
+                <th scope="col">Nome</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Profissão</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Ana Maria</td>
+                <td>F</td>
+                <td>25 anos</td>
+                <td>Jornalista</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Cláudio</td>
+                <td>M</td>
+                <td>28 anos</td>
+                <td>Programador</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Gustavo</td>
+                <td>M</td>
+                <td>42 anos</td>
+                <td>Professor</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Hélio</td>
+                <td>M</td>
+                <td>19 anos</td>
+                <td>Vendedor</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Maria</td>
+                <td>F</td>
+                <td>39 anos</td>
+                <td>Médica</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Otávio</td>
+                <td>M</td>
+                <td>22</td>
+                <td>Nutricionista</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</body>
+</html>

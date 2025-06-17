@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios (Parte 1)</title>
+    <style>
+
+        table {
+
+            min-width: 500px;
+            border-collapse: collapse;
+
+        }
+
+        caption {
+
+            font: italic 1.3em Arial;
+            border: 1px solid rgba(0, 0, 0, 0.993);
+            padding: 10px;
+            background-color: lightgray;
+
+        }
+
+        th, td {
+
+            font: italic 1.1em Arial;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        tfoot {
+
+            background-color: lightgray;
+            
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 90 - Mesclagem de células/ex0090.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 90 - Mesclagem de células</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 92 - Exemplo de tabela completa/ex0092.html">  &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt; Aula 92 - Exemplo de tabela completa</span></a>
+    </div>
+
+    <h1>Desafios (Parte 1)</h1>
+
+    <table>
+
+        <caption>
+
+            ( Aqui estamos representando o Primeiro Desafio )
+
+        </caption>
+
+        <thead>
+
+            <tr>
+
+                <th>1º Coluna</th>
+                <th>2º Coluna</th>
+                <th>3º Coluna</th>
+                <th>4º Coluna</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>1</td>
+                <td>2</td>
+                <td rowspan="2">3</td>
+                <td>4</td>
+
+            </tr>
+
+            <tr>
+
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="3">8</td>
+                <td>9</td>
+
+            </tr>
+
+            <tr>
+                
+                <td rowspan="2">10</td>
+                <td colspan="2">11</td>
+                <td>12</td>
+
+            </tr>
+
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+
+        </tbody>
+
+        <tfoot>
+
+            <tr>
+
+                <th colspan="4">Desafio realizado com sucesso!</th>
+
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+    <br><br>
+
+    <table>
+
+        <caption>( Aqui estamos representando o Segundo Desafio )</caption>
+        
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>1º Coluna</th>
+                    <th>2º Coluna</th>
+                    <th>3º Coluna</th>
+                    <th>4º Coluna</th>
+                    <th>5º Coluna</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td colspan="4">A</td>
+                    <td rowspan="4">B</td>
+
+                </tr>
+
+                <tr>
+
+                    <td rowspan="4">C</td>
+                    <td>D</td>
+                    <td>E</td>
+                    <td>F</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>G</td>
+                    <td>H</td>
+                    <td>I</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>J</td>
+                    <td>L</td>
+                    <td>M</td>
+
+                </tr>
+
+                <tr>
+
+                    <td colspan="4">N</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </table>
+
+</body>
+</html>

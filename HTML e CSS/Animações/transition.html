@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações - Transition</title>
+
+    <style>
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        #box {
+
+            margin: 50px;
+            background-color: lightblue;
+            border-radius: 10px;
+            border: 1px solid rgb(139, 199, 219);
+            box-shadow: 3px 3px 8px lightblue;
+            height: 200px;
+            width: 200px;
+            
+            /* Aqui definimos as propriedades que será implementada na transição. */
+            transition-property: background-color, border-radius, border, box-shadow;
+
+            /* O tempo de duração da transição. */
+            transition-duration: 4s, 2s, 4s, 4s;
+
+            /* Os breakpoints da transição. */
+            transition-timing-function: cubic-bezier(.15, .89, .85, .26);
+
+        }
+
+        #box:hover {
+
+            background-color: lightcoral;
+            border-radius: 50%;
+            border: 1px solid rgb(248, 118, 118);
+            box-shadow: 3px 3px 8px lightcoral;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="box"></div>
+
+</body>
+</html>

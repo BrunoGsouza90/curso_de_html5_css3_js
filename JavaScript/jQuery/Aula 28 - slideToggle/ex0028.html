@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide Toggle</title>
+
+    <style>
+
+        * {
+
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .menu {
+
+            display: flex;
+            width: 100vw;
+            flex-direction: column;
+
+        }
+
+        #menus {
+
+            background-color: #888;
+            display: flex;
+            width: 100vw;
+
+        }
+
+        .btnMenu {
+
+            margin: 5px;
+            padding: 5px;
+            cursor: pointer;
+            text-transform: capitalize;
+
+        }
+
+        #controle {
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #888;
+            padding: 5px;
+            border-radius: 0px 0px 10px 10px;
+            margin: 0px 10px 0px auto;
+
+        }
+
+        button {
+
+            margin: 5px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.425);
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>slide Toggle</h1>
+
+     <div id="menu" class="menu">
+
+        <div id="menus">
+
+            <button class="btnMenu">home</button>
+
+            <button class="btnMenu">cursos</button>
+
+            <button class="btnMenu">material</button>
+
+            <button class="btnMenu">contatos</button>
+
+            <button class="btnMenu">sobre</button>
+
+        </div>
+
+        <div id="controle">
+
+            <button id="btnmenu">▲</button>
+
+            <p id="msg"></p>
+
+        </div>
+
+     </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        let mostrar_ocultar = 'ocultar'
+        
+        $('#btnmenu').on({
+
+            click: () => {
+
+                $('#menus').slideToggle({duration: 300, complete:() => {
+
+                    if($('#btnmenu').html() == '▲') {
+
+                        $('#btnmenu').html('▼')
+
+                    } else {
+
+                        $('#btnmenu').html('▲')
+
+                    }
+
+                }})
+
+            }
+
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dinámicos</title>
+    <style>
+
+        #principal {
+
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        #bloco {
+
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.425);
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.397);
+            background-color: black;
+
+        }
+
+        #bloco2 {
+
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 0, 0, 0.521);
+            box-shadow: 3px 3px 8px rgba(255, 0, 0, 0.329);
+            background-color: red;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Eventos Dinámicos</h1>
+
+    <div id="principal">
+
+        <div id="bloco"></div>
+
+        <div id="bloco2"></div>
+
+    </div>
+
+    <p id="texto"></p>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        /* Aqui estamos usando eventos em funções utilizando o ON. */
+        $("#bloco").on({
+
+            click:() => {
+                
+                $("#texto").text('Cliquei no quadrado...')
+
+            },
+
+            mouseenter:() => {
+
+                $("#texto").text('Entrei no quadrado...')
+
+            },
+
+            mouseout:() => {
+
+                $("#texto").text('Sai do quadrado...')
+
+            }
+
+        })
+
+        $("#bloco2").click(() => {
+
+            $("#bloco").trigger('click')
+
+        })
+
+    </script>
+
+</body>
+</html>

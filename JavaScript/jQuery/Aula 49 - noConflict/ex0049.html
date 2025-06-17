@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noConflict</title>
+
+</head>
+<body>
+
+    <h1>noConflict</h1>
+
+    <!-- Aqui estamos fazendo a chamada do jQuery. -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        // Aqui estamos mudando o seletor do jQuery. de "jQuery" e "$" para "seletor".
+
+        seletor = $.noConflict()
+
+        seletor("body").css({"background-color" : "lightgreen"})
+
+    </script>
+    
+</body>
+</html>

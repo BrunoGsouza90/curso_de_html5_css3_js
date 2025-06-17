@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contéudo no iframe por código</title>
+    <style>
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        iframe#tela {
+
+            width: 95vw;
+            border: 2px solid black;
+            height: 400px;
+
+        } 
+
+    </style>
+
+</head>
+
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 98 - Navegação no iframe/ex0098.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 98 - Navegação no iframe</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 100 - Tornando iframes seguros/ex00100.html">  &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt; Aula 100 - Tornando iframes seguros</span></a>
+    </div>
+
+    <h1>Contéudo no iframe por código</h1>
+
+    <ul>
+
+        <li><a href="Páginas Extras/Tabela de produtos.html" target="frame">Tabela de produtos</a></li>
+        <li><a href="Páginas Extras/pagina001.html" target="frame">Primeira página</a></li>
+        <li><a href="Páginas Extras/pagina002.html" target="frame">Segunda página</a></li>
+        <li><a href="Páginas Extras/pagina003.html" target="frame">Terceira página</a></li>
+
+    </ul>
+
+    <!-- Aqui estamos usando o "srcdoc" que permite colocar textos em HTML5. -->
+    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit reiciendis saepe totam aliquid, beatae atque cum facilis at nulla velit debitis vitae voluptatum harum quasi magni animi fugiat hic perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos omnis necessitatibus facere asperiores nihil ipsum dolores voluptatem quod perferendis eius vitae harum dicta architecto fugit, ut illo natus nemo quia.</p>">
+
+        <p>Infelizmente seu navegador não é compatível com  isso!</p>
+        
+    </iframe>
+
+</body>
+</html>

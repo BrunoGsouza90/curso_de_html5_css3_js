@@ -1,0 +1,17 @@
+{
+  "name": "curso-npm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo 'Iniciando o servidor de produção...",
+    "dev": "echo 'Iniciando o servidor de desenvolvimento"
+  },
+  "keywords": [],
+  "author": "Bruno Gonçalves",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "typescript": "^5.6.2"
+  }
+}

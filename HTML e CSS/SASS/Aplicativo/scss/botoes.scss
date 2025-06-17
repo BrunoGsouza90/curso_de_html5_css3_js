@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.botao {
+
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.364);
+    margin: 10px;
+    color: rgb(23, 23, 23);
+    font: normal 1em cursive;
+    transition: 
+    0.5s background-color ease-in-out,
+    transform 0.3s ease-in-out;
+
+}

@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+
+    // Versão do "JS" que será compilado.
+    "target": "ESNext",
+
+    // Permiti trabalharmos como "commonJS" que é a forma de compilação antiga e o "ESNext" que a forma de compilação mais recente.
+    "module": "ESNext",
+
+    // Permiti que os arquivos "JS" sejão importados dentro de arquivos "TS".
+    "allowJs": true,
+
+    // Aqui o "@ts-check" não precisa estar comentado na primeira linha do arquivo JS. Ele fará a exibição de erros dentro dos arquivos "JS".
+    "checkJs": true,
+
+    // Vai criar uma pasta chamada "./dist" e todos os arquivos ".js" compilados irão para lá.
+    "outDir": "./dist",
+
+    // Remove os comentários dos arquivos "JS" que serão compilados.
+    "removeComments": true,
+
+    // Esses comandos vem por padrão ativados.
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+
+  },
+
+  // Vai compilar a pasta "src" e a pasta "testes".
+  "include": [
+
+    "src",
+    "testes"
+
+  ],
+
+  // Não irá compilar nada apartir de "src2".
+  // Não irá compilar nada apartir de "testes1".
+  "exclude": [
+
+    "src/src1/src2",
+    "testes/testes1"
+
+  ]
+
+}

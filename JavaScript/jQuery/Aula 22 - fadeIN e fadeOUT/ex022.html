@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeIn e fadeOut</title>
+    <style>
+
+        .caixa {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.315);
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            left: 40px;
+            top: 150px;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>fadeIn e fadeOut</h1>
+
+    <div id="caixa" class="caixa">
+
+        <h3>CFB Cursos</h3>
+
+        <p>Curso de jQuery</p>
+
+    </div>
+
+    <button id="btn_mostrar">Mostrar</button>
+
+    <button id="btn_ocultar">Ocultar</button>
+
+    <button id="btn_visibilidade">Mostrar & Ocultar</button>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("#btn_mostrar").on({
+
+            click:() => {
+
+                $("#caixa").fadeIn()
+
+            }
+
+        })
+        
+        $("#btn_ocultar").on({
+
+            click:() => {
+
+                $("#caixa").fadeOut()
+
+            }
+        })
+
+        $("#btn_visibilidade").on({
+
+            click:() => {
+
+                $("#caixa").fadeOut(1500).delay(1500).fadeIn(1500)
+
+            }
+
+        })
+
+    </script>
+    
+</body>
+</html>

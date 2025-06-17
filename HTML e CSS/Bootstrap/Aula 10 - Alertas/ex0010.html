@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Aqui estamos fazendo a chamada do CSS Bootstrap via CDN. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Alertas</title>
+</head>
+<body>
+    
+    <h1 class="m-3">Alertas</h1>
+    
+    <!-- Aqui estamos indicando alertas utilizando o Bootstrap, para mais detalhes acesse:
+
+    https://getbootstrap.com/docs/4.0/components/alerts/
+
+    -->
+    <div class="container border my-5 p-3">
+
+        <p class="alert alert-primary" role="alert">Primary</p>
+        <p class="alert alert-secondary" role="alert">Secondary</p>
+        <p class="alert alert-success" role="alert">Success</p>
+        <p class="alert alert-danger" role="alert">Danger</p>
+        <p class="alert alert-warning" role="alert">Warning</p>
+        <p class="alert alert-info" role="alert">Info</p>
+        <p class="alert alert-light" role="alert">Light</p>
+        <p class="alert alert-dark" role="alert">Dark</p>
+
+    </div>
+
+    <div class="container my-5 p-3">
+
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+
+            Aprendendo a usar o <strong>alert-dismissible</strong>.
+
+            <button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+        </div>
+
+    </div>
+
+    <!-- Aqui estamos fazendo a chamada do JS Bootstrap via CDN. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

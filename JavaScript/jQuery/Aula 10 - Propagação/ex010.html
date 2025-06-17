@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagação</title>
+    <style>
+
+        div#container {
+
+            border: 1px solid red;
+            padding: 20px;
+            border-radius: 5px;
+
+        }
+
+        p {
+
+            border: 1px solid blue;
+            padding: 10px;
+            max-width: 80px;
+            border-radius: 5px;
+
+        }
+
+        span {
+
+            border: 1px solid green;
+            padding: 10px;
+            max-width: 80px;
+            border-radius: 5px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Propagação</h1>
+
+    <div id="container">
+
+        <p>CFB Cursos</p>
+        
+        <br><br><br>
+
+        <span>Curso de jQuery</span>
+
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("div").click(() => {
+            
+            window.alert('Evento disparado no "DIV"')
+
+        })
+
+        $("p").click(() => {
+            
+            window.alert('Evento disparo no "p"')
+            
+        })
+
+        $("span").click(() => {
+            
+            window.alert('Evento disparo no "span"')
+            
+        })
+
+    </script>
+    
+</body>
+</html>

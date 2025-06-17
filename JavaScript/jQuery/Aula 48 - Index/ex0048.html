@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+
+    <style>
+
+        .caixa {
+
+            background-color: yellow;
+            padding: 10px;
+            border: 3px solid red;
+            border-radius: 5px;
+            margin-top: 10px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Index</h1>
+
+    <div id="caixa" class="caixa">
+
+        <p id="p1">Texto 1</p>
+        <p id="p2">Texto 2</p>
+        <p id="p3">Texto 3</p>
+        <p id="p4">Texto 4</p>
+        <p id="p5">Texto 5</p>
+        <p id="p6">Texto 6</p>
+
+    </div>
+
+    <p id="p1">Texto 1</p>
+    <p id="p2">Texto 2</p>
+    <p id="p3">Texto 3</p>
+    <p id="p4">Texto 4</p>
+    <p id="p5">Texto 5</p>
+    <p id="p6">Texto 6</p>
+
+    <!-- Aqui estamos fazendo a chamada do jQuery. -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("p, h1, div").click((event) => {
+
+            window.alert($(event.currentTarget).index())
+
+        })
+
+    </script>
+    
+</body>
+</html>

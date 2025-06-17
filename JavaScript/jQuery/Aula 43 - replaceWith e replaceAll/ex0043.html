@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replaceWith e replaceAll</title>
+
+    <style>
+
+        .cor {
+
+            color: red;
+
+        }
+
+        .menu {
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>replaceWith e replaceAll</h1>
+
+    <div class="menu">
+
+        <button id="btn_replace">replace All</button>
+    
+    </div>
+
+    <div>
+
+        <h1 class="cor">CFB Cursos</h1>
+
+        <h1 class="cor">Curso de jQuery</h1>
+
+        <h2 class="cor">replaceAll</h2>
+
+        <h3 class="cor">replaceWith</h3>
+
+    </div>
+
+    <!-- Aqui estamos fazendo a chamada do jQuery. -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("#btn_replace").click(() => {
+
+            $("<p>Trocado</p>").replaceAll(".cor")
+
+        })
+
+    </script>
+    
+</body>
+</html>

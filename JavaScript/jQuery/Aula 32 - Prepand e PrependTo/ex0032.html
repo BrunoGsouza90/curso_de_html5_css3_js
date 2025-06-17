@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepand e PrepandTo</title>
+
+    <style>
+
+        .caixa {
+
+            background-color: #bbb;
+            border: 3px solid #000;
+            border-radius: 10px;
+            padding: 10px 0px 0px 0px;
+            margin: 10px 0px 0px 0px;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+
+        }
+
+        .subcaixa {
+
+            margin: 0px 0px 10px 10px;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            background: lightcoral;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Prepand e PrepandTo</h1>
+
+    <div id="content">
+
+        <button id="btnAdicionarAntesPrepand">Adicionar Antes com Prepand</button>
+
+        <button id="btnAdicionarAntesPrepandTo">Adicionar Antes com PrepandTo</button>
+
+        <button id="btnLimpar">Limpar</button>
+
+    </div>
+
+    <div class="caixa" id="caixa">
+
+
+
+    </div>
+
+    <!-- Aqui estamos fazendo a chamada do jQuery. -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        let num = 1
+
+        $("#btnAdicionarAntesPrepand").on({
+
+            click: () => {
+
+                $("#caixa").prepend(`<div class="subcaixa">${num}</div>`)
+
+                num++
+
+            }
+
+        })
+
+        $("#btnAdicionarAntesPrepandTo").on({
+
+            click: () => {
+
+                $(`<div class="subcaixa">${num}</div>`).prependTo($("#caixa"))
+
+                num++
+
+            }
+
+        })
+
+        $("#btnLimpar").on({
+
+            click: () => {
+
+                $("#caixa").html('')
+
+            }
+
+        })
+
+    </script>
+    
+</body>
+</html>

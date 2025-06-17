@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siblings, Next, Prev</title>
+</head>
+<body>
+
+    <h1>Siblings, Next, Prev</h1>
+
+    <div>
+
+        <h3>CFB Cursos</h3>
+
+        <p id="texto">Curso de jQuery</p>
+
+        <h2>Seletores parent</h2>
+
+        <p id="texto1">Siblings</p>
+
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        // $("p").siblings().css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
+
+        // $("p").next().css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
+
+        // $("p").prev().css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
+
+        // $("h3").nextAll().css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
+
+        $("p#texto1").prevUntil('h3').css({'border': '1px solid red', 'padding': '20px', 'margin': '10px', 'max-width': '200px', 'text-align': 'center', 'border-radius': '10px'})
+
+    </script>
+    
+</body>
+</html>

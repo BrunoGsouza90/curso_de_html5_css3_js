@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Criando layouts em grade</title>
+
+    <style>
+
+        body{
+
+            font-family: Arial;
+            color: black;
+        }
+
+        .container{
+
+            /* Aqui estamos declarando o display como grid. */
+            display: grid;
+
+            /* Aqui estamos definindo quantas colunas o grid terá e qual a largura de cada container filho. */
+            grid-template-columns: 100px 100px 100px;
+
+            /* Aqui estamos definindo quantas linhas o grid terá e qual a altura de cada container filho. */
+            grid-template-rows: 100px 100px 100px;
+            
+            /* Aqui estamos determinando a margin lateral de cada container filho. */
+            grid-column-gap: 30px;
+
+            /* Aqui estamos determinando a margin horizontal de cada container filho. */
+            grid-row-gap: 30px;
+
+            justify-content: space-evenly;
+
+        }
+
+        .item{
+
+            background-color: rgb(52, 52, 190);
+            color: white;
+            border: 1px solid black;
+            text-align: center;
+
+        }
+
+        div#item_3{
+
+            /* De terminar aonde a linha do container filho irá iniciar. */
+            grid-row-start: 1;
+
+            /* De terminar aonde a linha do container filho irá terminar. */
+            grid-row-end: span 3;
+
+            /* Podemos também determinar ambas declarações usando: */
+            grid-row: 1 / span 3;
+
+            /* De terminar aonde a coluna do container filho irá iniciar. */
+            grid-column-start: 1;
+
+            /* De terminar aonde a coluna do container filho irá terminar. */
+            grid-column-end: 3;
+
+            /* Podemos também determinar ambas declarações usando: */
+            grid-column: 1 / span 3;
+            
+            /* Aqui definimos todos os conceitos em uma única propriedade. */
+            grid-area: 1 / 1 / span 2 / span 2;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Criando layouts em grade</h1>
+    
+    <div class="container">
+
+        <div class="item area" id="item_1">CFB Cursos 1</div>
+        <div class="item" id="item_2">CFB Cursos 2</div>
+        <div class="item" id="item_3">CFB Cursos 3</div>
+        <div class="item" id="item_4">CFB Cursos 4</div>
+        <div class="item" id="item_5">CFB Cursos 5</div>
+        <div class="item" id="item_6">CFB Cursos 6</div>
+
+    </div>
+
+</body>
+</html>

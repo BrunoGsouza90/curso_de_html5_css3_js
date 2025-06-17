@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@use "sass:color";
+
+@use "./botoes.scss" as *;
+@use "./variaveis.scss" as *;
+
+table {
+
+    margin: 0 auto;
+    border-collapse: collapse;
+
+}
+
+td, th {
+
+    border: 1px solid black;
+    padding: 5px 20px;
+    text-align: center;
+
+    &:hover {
+
+        cursor: pointer;
+        background-color: lightgreen;
+
+    }
+
+}
+
+.botao_laranja {
+
+    @extend .botao;
+    background-color: $laranja;
+
+    &:hover {
+
+        cursor: pointer;
+        background-color: $laranja_hover;
+        transform: scale(1.1);
+
+    }
+
+}
+
+.botao_azul {
+
+    @extend .botao;
+    background-color: $azul;
+
+    &:hover {
+
+        cursor: pointer;
+        background-color: $azul_hover;
+        transform: scale(1.1);
+
+    }
+
+}
+
+@mixin titulo($color) {
+
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.417);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    color: $color;
+
+    &:hover {
+
+        background-color: color.adjust(black, $lightness: -50%);
+
+    }
+
+}
+
+.titulo_preto {
+
+    @include titulo(black);
+
+}
+
+.titulo_amarelo {
+
+    @include titulo(rgb(255, 255, 0));
+
+}
+
+.titulo_verde {
+
+    @include titulo(green);
+
+}
+
+.titulo_rosa {
+
+    @include titulo(pink);
+
+}

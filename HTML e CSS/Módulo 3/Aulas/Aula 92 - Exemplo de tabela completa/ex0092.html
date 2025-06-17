@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de tabela completa</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+
+        }
+
+        table {
+
+            margin: auto;
+            min-width: 500px;
+            border-collapse: collapse;
+
+        }
+
+        caption {
+
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 10px;
+            border: 2px solid gray;
+            background-color: lightgray;
+
+        }
+
+        td, th {
+
+            border: 1px solid gray;
+            padding: 10px;
+            text-align: center;
+
+        }
+        
+        th {
+
+            font-weight: bold;
+            border-color: gray;
+            border-width: 2px;
+
+        }
+
+        td.borda_lateral {
+
+            border-right: 2px solid gray;
+
+        }
+
+        td.borda_inferior {
+
+            border-bottom: 2px solid gray;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 91 - Desafios (Parte 1)/ex0091.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 91 - Desafios &lpar; Parte 1 &rpar;</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 93 - Aplicando colunas com colgroup/ex0093.html">  &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt; Aula 93 - Aplicando colunas com colgroup</span></a>
+    </div>
+
+    <h1>Exemplo de tabela completa</h1>
+
+    <table>
+
+        <caption>
+
+            ( Filmes favoritos )
+
+        </caption>
+
+        <thead>
+
+            <tr>
+                <th scope="col">Grupos</th>
+                <th scope="col">Nomes</th>
+                <th scope="colgroup" colspan="3">Filmes</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <th scope="rowgroup" rowspan="3">Mulheres</th>
+                <td class="borda_lateral">Ana Maria Santos</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td class="borda_lateral">Vingadores</td>
+
+            </tr>
+
+            <tr>
+
+                <td class="borda_lateral">Beatriz Souza</td>
+                <td>Hulk</td>
+                <td>Inception</td>
+                <td class="borda_lateral">Batman</td>
+
+            </tr>
+
+            <tr>
+
+                <td class="borda_lateral borda_inferior">Cládia Melo</td>
+                <td class="borda_inferior">Oblivion</td>
+                <td class="borda_inferior">Matrix</td>
+                <td class="borda_lateral borda_inferior">Big Hero</td>
+
+            </tr>
+
+            <tr>
+
+                <th scope="rowgroup" rowspan="3">Homens</th>
+                <td class="borda_lateral">Bruno Mendonça</td>
+                <td>Intocáveis</td>
+                <td>Amnésia</td>
+                <td class="borda_lateral">Gladiador</td>
+
+            </tr>
+
+            <tr>
+
+                <td class="borda_lateral">Daniel Lourenço</td>
+                <td>Wall-E</td>
+                <td>Oldboy</td>
+                <td class="borda_lateral">Dangal</td>
+
+            </tr>
+
+            <tr>
+
+                <td class="borda_lateral borda_inferior">Fabiano Mota</td>
+                <td class="borda_inferior">Star Wars 5</td>
+                <td class="borda_inferior">Taxi Driver</td>
+                <td class="borda_lateral borda_inferior">Toy Story</td>
+
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+
+            <tr>
+
+                <th scope="row" colspan="4">Total</th>
+                <td class="borda_lateral borda_inferior">1000</td>
+                
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+</body>
+</html>

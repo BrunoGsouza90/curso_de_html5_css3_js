@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colocando áudio no seu site</title>
+</head>
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 12pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 32 - Imagens que se adaptam sozinhas/ex0021.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 32 - Imagens que se adaptam sozinhas</a>
+        <a style="font-size: 12pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 35 - Vídeos em hospedagem própria/ex0023.html">Aula 35 - Vídeos em hospedagem própria&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt;</span></a>
+    </div>
+
+    <h1>Reproduzindo áudio</h1>
+
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+
+    <!-- Para colocar áudios basta usar a TAG "audio" com o atributo "controls".-->
+
+    <!-- Caso queira que a música seja reproduzida automaticamente utilize o atributo "autoplay".-->
+    <audio src="Mídia/Doh De Oh - Kevin MacLeod.mp3" controls></audio>
+
+    <!-- Para utilizar source's com áudio utilizamos dentro da TAG "audio preload="" " a TAG "source src".-->
+
+    <br>
+
+    <!-- preload="auto" - Vai carregar o site apenas quando o áudio estiver carregado também. -->
+
+    <!-- "preload="metadata" - Vai carregar o site quando estiver carregado apenas ideiás do áudio como por exemplo data e duração. -->
+    
+    <!-- "preload="none" - Vai carregar o áudio no site apenas quando o usuário apertar play. -->
+
+    <!-- autoplay - Toca o áudio automaticamente.  -->
+
+    <!-- constrols - Cria um botão para interação do áudio.  -->
+            
+    <!-- loop - Criação de uma música de fundo no site. -->
+    <audio preload="metadata" controls loop>
+
+        <source src="Mídia/You So Zany - Audionautix.mp3" type="audio/mpeg">
+
+        <source src="Mídia/You So Zany - Audionautix.mp3" type="audio/ogg">
+
+        <!-- Tente evitar ao máximo arquivos WAV porque são arquivos extramente pesados. -->
+        <source src="Mídia/You So Zany - Audionautix.mp3" type="audio/wav">
+
+        <p>Infelizmente seu navegador não consegue reproduzir áudio.</p>
+        
+        <a href="Mídia/You So Zany - Audionautix.mp3">Clique aqui para baixar o arquivo MP3.</a>
+
+    </audio>
+    
+</body>
+</html>

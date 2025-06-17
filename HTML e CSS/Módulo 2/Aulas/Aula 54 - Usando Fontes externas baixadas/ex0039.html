@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando fontes externas baixadas</title>
+
+    <style>
+
+        /* Links para baixar fontes externas:
+        
+        https://www.dafont.com/pt/
+        https://fonts.google.com/?preview.layout=grid
+
+        Maneira correta de importar fontes baixadas: */
+        @font-face {
+
+            font-family: 'Love';
+            src: url(Fonts/Filxgirl.TTF) format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+
+            font-family: 'Vampire';
+            src: url(Alice_in_Wonderland_3.ttf) format(truetype);
+            font-weight: normal;
+            font-size: normal;
+
+        }
+
+        h1 {
+            font-family: 'Love';
+            font-size: 64px;
+        }
+
+        p {
+
+            font-family: 'Vampire';
+            font-size: 20px;
+
+        }
+
+
+        /* 
+
+            Tipos de formato de fontes:
+
+            - opentype (otf).
+            - truetype (ttf).
+            - embedded - opentype.
+            - truetype-aat (Apple Advanced Typography).
+            - svg.
+
+        */
+
+    </style>
+
+</head>
+<body>
+    
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 11pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 53 - Usando o Google Fonts/ex0038.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 53 - Usando o Google Fonts</a>
+        <a style="font-size: 11pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 55 - Capturando as fontes usadas em um site/ex0040.html">Aula 55 - Capturando as fontes usadas em um site&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt;</span></a>
+    </div>
+
+    <h1>Usando fontes externas baixadas</h1>
+
+    <p>
+
+        Lorem ipsum dolor sit amet consectetadipisicing elit. Placeatdoloremque sapiente est, error tempora maiores in, quod saepeeligendi nemo nisi quo cupiditate! Architecto debitis temporequasi voluptatum atque possimus.
+
+     </p>
+     
+</body>
+</html>

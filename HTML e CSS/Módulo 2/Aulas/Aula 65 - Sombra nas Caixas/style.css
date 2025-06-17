@@ -1,0 +1,79 @@
+@charset "utf8";
+
+body {
+
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, rgba(0, 0, 255, 0.24), rgba(128, 0, 128, 0.295));
+
+}
+
+header {
+
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+nav {
+
+    background-color: rgb(85, 85, 85);
+    padding: 3px;
+
+    /* Aqui estamos definindo o sombreamento na caixa. O sobreamento é definido como:display:
+
+    Sombra Interna, Sombreamento Interno, Deslocamento Horizontal, Deslocamento Vertical, Espalhamento e Sombra. */
+    box-shadow: inset 2px 1px 8px 8px rgba(0, 0, 0, 0.288);
+
+}
+
+nav > a {
+
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 30px;
+
+}
+
+nav > a:hover {
+
+    text-decoration: underline;
+
+}
+
+main {
+
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+article {
+
+    background-color: lightgray;
+
+}
+
+article > aside {
+
+    background-color: rgb(151, 151, 151);
+
+}
+
+footer {
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    margin: 0px;
+
+}
+
+footer > p {
+
+    margin: 0;
+    
+}

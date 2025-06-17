@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+</head>
+<body>
+
+    <h1>Somando Valores 1</h1>
+    <input type="number" id="primero_texto_um"> +
+    <input type="number" id="primeiro_texto_dois">
+    <button onclick="primeiro_somar()">Somar</button>
+    <p>Resultado = ?</p>
+
+    <h1>Somando Valores 2</h1>
+    <input type="number" id="segundo_texto_um"> +
+    <input type="number" id="segundo_texto_dois">
+    <button id="botao">Somar</button>
+    <p>Resultado = ?</p>
+    <script>
+
+        /* Interajindo funções com o HTML. */
+        function primeiro_somar() {
+            var primeiro_texto_um = window.document.getElementById('primero_texto_um')
+            var primeiro_texto_dois = window.document.getElementById('primeiro_texto_dois')
+            var primeira_soma = Number(primero_texto_um.value) + Number(primeiro_texto_dois.value)
+            primeiro_resultado = window.document.getElementsByTagName('p')[0]
+            primeiro_resultado.innerText = `Resultado = ${primeira_soma}`
+        }
+
+        /* Interajindo diretamente pelo script com o DOM. */
+        window.document.getElementById('botao').addEventListener('click', function segundo_somar(){
+            var segundo_texto_um = window.document.getElementById('segundo_texto_um')
+            var segundo_texto_dois = window.document.getElementById('segundo_texto_dois')
+            var segunda_soma = Number(segundo_texto_um.value) + Number(segundo_texto_dois.value)
+            var primeiro_resultado = window.document.getElementsByTagName('p')[1]
+            primeiro_resultado.innerText = `Resultado = ${segunda_soma}`
+        })
+
+    </script>
+
+</body>
+</html>

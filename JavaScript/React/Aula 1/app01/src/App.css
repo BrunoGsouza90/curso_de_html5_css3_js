@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.container_custom {
+
+  background-color: lightskyblue;
+  font: italic 1em cursive;
+  padding: 10px;
+  text-align: center;
+
+}

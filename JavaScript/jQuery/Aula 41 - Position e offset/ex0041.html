@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position e offset</title>
+
+    <style>
+
+        .caixa {
+
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0px 0px 0px;
+            display: flex;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            background-color: lightcoral; 
+            width: 100px;
+            height: 100px;
+            position: absolute; top: 200px; 
+            left: 100px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Position e offset</h1>
+
+    <button id="btnPosicao">Obter Posição</button>
+
+    <br><br>
+
+    <label for="top">Top:</label>
+    <input type="range" name="top" id="top" min="200" max="500">
+
+    <label for="left">Left:</label>
+    <input type="range" name="left" id="left" min="100" max="500">
+
+    <div id="caixa" class="caixa"></div>
+
+    <!-- Aqui estamos fazendo a chamada do jQuery. -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("#btnPosicao").click(() => {
+
+            let posicao = $("#caixa").position()
+
+            window.alert(`Top: ${posicao.top}.\nLeft: ${posicao.left}.`)
+
+        })
+
+        $("#top").change((event) => {
+
+            let valor = event.target.value
+
+            $("#caixa").offset({"top" : valor})
+
+        })
+
+        $("#left").change((event) => {
+
+            let valor = event.target.value
+
+            $("#caixa").offset({"left" : valor})
+
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+@charset "utf8";
+
+body {
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+a.link {
+
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+
+    /* Aprendemos que esta configuração é usada para fazer underline. Aqui também podemos retirar o underline com o "none". */
+    text-decoration: none;
+
+}
+
+/* Pseudo-classe para sites que já foram visitados através do link. */
+a.link:visited {
+
+    color: darkred;
+
+}
+
+/* Pseudo-classe responsável por alterar o elemento quando ele estiver ativo; ou seja quando clicarmos nele. */
+a.link:active {
+
+    color: rgba(255, 255, 0, 0.432);
+
+}
+
+a.link:hover {
+
+    color: black;
+    text-decoration: underline;
+
+}
+
+/* Pseudo-classe repsonsável por adicionar configurações em todos elementos da classe no final dos elementos.*/
+a.link::after {
+
+    /* Aqui estamos adicionando um contéudo. */
+    content:' [link]';
+    
+    font-weight: normal;
+    color: darkgray;
+
+}
+
+/* Pseudo-classe repsonsável por adicionar configurações em todos elementos da classe antes dos elementos. */
+a.link::before {
+
+    content: '→ ';
+    color: blue;
+
+}

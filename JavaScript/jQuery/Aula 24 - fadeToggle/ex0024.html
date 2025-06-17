@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fadeToggle</title>
+    <style>
+
+        h1 {
+
+            margin: 20px 20px 10px 20px;
+
+        }
+
+        * {
+
+            padding: 0px;
+            margin: 0px;
+            border: none;
+
+        }
+
+        .menu {
+
+            background-color: #ddd;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.322);
+
+        }
+
+        .itemMenu {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: #128;
+            color: #fff;
+            text-transform: capitalize;
+            cursor: pointer;
+            padding: 20px;
+            border: 1px solid black;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.322);
+
+        }
+
+        .submenu {
+
+            display: none;
+            border: 1px solid black;
+            width: 100vw;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .itemSubMenu {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            text-transform: capitalize;
+            cursor: pointer;
+            box-sizing: border-box;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>fadeToggle</h1>
+
+    <div id="menu" class="menu">
+
+        <div class="itemMenu">Home</div>
+
+        <div id="menujquery" class="itemMenu">Jquery</div>
+
+        <div id="menucanvas" class="itemMenu">Canvas</div>
+
+        <div id="menupython" class="itemMenu">Python</div>
+
+        <div id="menuarduino" class="itemMenu">Arduino</div>
+
+    </div>
+
+    <div id="submenu_jquery" class="submenu">
+
+        <div class="itemSubMenu">Aulas Jquery</div>
+
+        <div class="itemSubMenu">Material Jquery</div>
+
+    </div>
+
+    <div id="submenu_canvas" class="submenu">
+
+        <div class="itemSubMenu">Aulas Canvas</div>
+
+        <div class="itemSubMenu">Material Canvas</div>
+
+    </div>
+
+    <div id="submenu_python" class="submenu">
+
+        <div class="itemSubMenu">Aulas Python</div>
+
+        <div class="itemSubMenu">Material Python</div>
+
+    </div>
+
+    <div id="submenu_arduino" class="submenu">
+
+        <div class="itemSubMenu">Aulas Arduino</div>
+
+        <div class="itemSubMenu">Material Arduino</div>
+
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $('.itemMenu').on({
+
+            mouseover:(function() {
+
+                $(this).fadeTo(200, 0.3)
+
+            }),
+
+            mouseleave: (function() {
+
+                $(this).fadeTo(200, 1.0)
+
+            })
+        })
+
+        $('#menujquery').click(function() {
+
+            $('#submenu_jquery').fadeToggle().css('display', 'flex')
+
+        })
+
+        $('#menucanvas').click(function() {
+
+            $('#submenu_canvas').fadeToggle().css('display', 'flex')
+
+        })
+
+        $('#menupython').click(function() {
+
+            $('#submenu_python').fadeToggle().css('display', 'flex')
+            
+        })
+
+        $('#menuarduino').click(function() {
+
+            $('#submenu_arduino').fadeToggle().css('display', 'flex')
+            
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como criar um degradê em CSS</title>
+
+    <style>
+
+        div#bloco {
+
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            border: 2px solid black;
+            font-size: 50px;
+            
+            /* Gradiente da esquerda para a direita, com duas cores. */
+            background-image: linear-gradient(to right, white, blue);
+
+        }
+
+        div#bloco1 {
+
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            border: 2px solid black;
+            margin: 10px;
+            font-size: 50px;
+
+            /* Gradiente da direita para a esquerda, com duas cores. */
+            background-image: linear-gradient(to left, white, blue);
+
+        }
+
+        div#bloco2 {
+
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            border: 2px solid black;
+            font-size: 50px;
+
+            /* Gradiente de baixo para cima, com duas cores. */
+            background-image: linear-gradient(to top, white, blue);
+
+        }
+
+        div#bloco3 {
+
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            border: 2px solid black;
+            font-size: 50px;
+
+            /* Gradiente de cima para baixo, com duas cores. */
+            background-image: linear-gradient(to bottom, white, blue);
+
+        }
+
+        div#bloco4 {
+
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            border: 2px solid black;
+            font-size: 50px;
+            
+            /* Utilizando cores do Adobe Color. */
+            background-image: linear-gradient(to right, #E0CB53, #53DCE0);
+
+        }
+
+        div#bloco5 {
+
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            border: 2px solid black;
+            font-size: 50px;
+            
+            /* Utilizando cores da Logo do Instagram.
+                Aqui estamos variando o ângulo em graus */
+            background-image: linear-gradient(-20deg, #4962CA, #7046ca, #4962ca, #F14D5A, #FFD053);
+
+        }
+
+        div#bloco6 {
+
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            border: 2px solid black;
+            font-size: 50px;
+            
+            /* Ângulo em círculo. */
+            background-image: radial-gradient(circle, #4962CA, #7046ca, #4962ca, #F14D5A, #FFD053);
+
+        }
+
+        div#bloco7 {
+
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            border: 2px solid black;
+            font-size: 50px;
+            
+            /* Variando os tamanhos de cores com porcentagem. */
+            background-image: linear-gradient(to top, 
+            #f09433 0%, 
+            #e6683c 20%, 
+            #dc2743 40%, 
+            #cc2366 60%, 
+            #bc1888 80%, 
+            #8357eb 100%);
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 45 - Como capturar cores da tela/ex0030.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 45 - Como capturar cores da tela</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 47 - Criando um exemplo real/ex0032.html">Aula 47 - Criando um exemplo real&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt;</span></a>
+    </div>
+
+
+
+    <h1>Testando Gradiente</h1>
+
+    <div style="display: flex; flex-wrap: wrap;">
+
+        <div id="bloco">
+            Da esquerda para direita.
+        </div>
+
+        <div id="bloco1">
+            Da direita para a esquerda.
+        </div>
+
+        <div id="bloco2">
+            De baixo para cima.
+        </div>
+
+        <div id="bloco3">
+            De cima para baixo.
+        </div>
+
+        <div id="bloco4">
+            Cores com Adobe Color.
+        </div>
+
+        <div id="bloco5">
+            Cores da Logo do Instagram.
+        </div>
+
+        <div id="bloco6">
+            Aplicando um Círculo Gradiente.
+        </div>
+
+        <div id="bloco7">
+            Aplicando tamanho as cores.
+        </div>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações - Transform</title>
+
+    <style>
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+
+            display: grid;
+            height: 100vh;
+            place-items: center;
+
+        }
+        
+        #caixa {
+
+            border: 3px solid black;
+            padding: 60px;
+
+        }
+
+        /* Começaremos a entender as animações apartir daqui! */
+
+        img {
+
+            max-width: 300px;
+
+            /* Faz a transição no eixo horizontal. */
+            transform: translateX(100px);
+
+            /* Faz a transição no eixo vertical. */
+            transform: translateY(100px);
+
+            /* Faz a transição nos dois eixos. */
+            transform: translate(100px, 100px);
+
+            /* Defini o valor de escala da propriedade No eixo horizontal. */
+            transform: scaleX(0.25);
+
+            /* Defini o valor de escala da propriedade No eixo vertical. */
+            transform: scaleY(0.25);
+
+            /* Defini o valor de escala da propriedade em ambos os eixos. */
+            transform: scale(0.75, 0.75);
+
+            /* Defini a rotação em graus usando "deg". */
+            transform: rotate(45deg);
+
+            /* Defini a rotação em voltas usando "turn". */
+            transform: rotate(0.125turn);
+
+            /* Usado para inclinar o elemento no eixo horizontal. */
+            transform: skewX(20deg);
+
+            /* Usado para inclinar o elemento no eixo vertical. */
+            transform: skewY(20deg);
+
+            /* Usado para inclinar o elemento em ambos os eixos. */
+            transform: skew(20deg);
+
+            /* Podemos também combinar os valores. */
+            transform: translate(100px, 100px) scale(0.75, 0.75) rotate(0.125turn) skew(40deg);;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="caixa">
+        
+        <img src="https://img.freepik.com/vetores-premium/logotipo-vetorial-premium-feito-no-brasil-icone-e-emblemas-do-logotipo-feito-no-brasil_526569-1228.jpg" alt="Logo Brasil">
+    
+    </div>
+
+</body>
+</html>

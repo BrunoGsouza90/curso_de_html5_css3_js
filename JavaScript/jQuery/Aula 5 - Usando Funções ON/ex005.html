@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Funções ON</title>
+    <style>
+
+        #principal {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+
+        #bloco {
+
+            width: 200px;
+            height: 200px;
+            background-color: black;
+
+        }
+
+        #bloco1 {
+
+            width: 200px;
+            height: 200px;
+            background-color: black;
+
+        }
+
+        p {
+
+            width: 100px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Usando Funções ON</h1>
+
+    <div id="principal">
+
+        <div id="bloco"></div>
+
+        <p id="texto"></p>
+
+    </div>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        /* Aqui estamos usando eventos em funções utilizando o ON. */
+        $("#bloco").on({
+
+            click:() => {
+
+                $("#texto").text('Cliquei no quadrado...')
+
+            },
+
+            mouseenter:() => {
+
+                $("#texto").text('Entrei no quadrado...')
+
+            },
+
+            mouseout:() => {
+
+                $("#texto").text('Sai do quadrado...')
+
+            }
+
+        })
+
+    </script>
+
+</body>
+</html>

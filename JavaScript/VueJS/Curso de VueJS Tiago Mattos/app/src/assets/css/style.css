@@ -1,0 +1,151 @@
+@charset "utf8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    background-color: rgba(127, 225, 255, 0.329);
+}
+
+header#principal nav{
+    background-color: gray;
+    padding: 30px;
+    border: 0.5px solid rgba(0, 0, 0, 0.247);
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.37);
+    font-weight: bold;
+    font-family: cursive;
+}
+
+header#principal nav a{
+    color: black;
+    font-size: 1.3em;
+    text-decoration: none;
+    padding-left: 30px;
+    transition: 0.3s;
+}
+
+header#principal nav a:hover{
+    color: rgba(255, 0, 0, 0.486);
+    text-decoration: underline;
+}
+
+header#principal nav a.custom-active {
+    color: rgb(23, 0, 128);
+}
+
+main#principal{
+    padding: 0px 10px 10px 10px;
+}
+
+main#home{
+    background-color: white;
+    padding: 50px;
+    min-width: 250px;
+    max-width: 1000px;
+    margin: auto;
+    border: 0.2px solid rgba(0, 0, 0, 0.267);
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.37);
+}
+
+main#home h1{
+    font-size: 50px;
+}
+
+main#contato{
+    background-color: white;
+    padding: 50px;
+    min-width: 250px;
+    max-width: 1000px;
+    margin: auto;
+    border: 0.2px solid rgba(0, 0, 0, 0.267);
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.37);
+}
+
+main#contato h1{
+    font-size: 50px;
+}
+
+main#produtos{
+    background-color: white;
+    padding: 50px;
+    min-width: 250px;
+    max-width: 1000px;
+    margin: auto;
+    border: 0.2px solid rgba(0, 0, 0, 0.267);
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.37);
+}
+
+main#produtos h1{
+    font-size: 50px;
+}
+
+main#produtos ul{
+    padding-left: 30px;
+    list-style-type: '\27A3\00A0';
+    font-size: 1.5em;
+    list-style-position: inside;
+    margin-top: 20px;
+}
+
+main#produtos a {
+    text-decoration: none;
+    color: rgb(63, 62, 62);
+    font-family: cursive;
+    transition: 0.3s;
+}
+
+main#produtos a:hover{
+    color: green;
+}
+
+main#produto{
+    background-color: white;
+    padding: 50px;
+    min-width: 250px;
+    max-width: 1000px;
+    margin: auto;
+    border: 0.2px solid rgba(0, 0, 0, 0.267);
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.37);
+}
+
+main#produto h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+main#produto p{
+    font-size: 1.2em;
+    font-family: cursive;
+}
+
+main#produto p strong{
+    color: rgba(255, 0, 0, 0.678);
+}
+
+main#aulas{
+    background-color: white;
+    padding: 50px;
+    min-width: 250px;
+    max-width: 1000px;
+    margin: auto;
+    border: 0.2px solid rgba(0, 0, 0, 0.267);
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.37);
+}
+
+main#aulas h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+main#aulas p{
+    font-size: 1.2em;
+    font-family: cursive;
+}

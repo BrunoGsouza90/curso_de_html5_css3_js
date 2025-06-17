@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonte, estilo e shorthend font</title>
+    <style>
+
+        /* Importação de uma font externa do Google Fonts. */
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
+
+        body {
+
+            font-family: 'work Sans', Arial, Helvetica;
+            font-size: 1em;
+            
+            /* Código utilizado para definir o peso da fonte. As nomenclaturas de pesos das fontes são:
+                
+            lighter, normal, bold, bolder, e de 100 - 900 .
+                
+            Nem todas as fontes tem todas as variações de peso. */
+            font-weight: lighter;
+
+            /* Código utilizado para definir o estilo da fonte. Aqui temos o estilo "normal" e "italic (itálico)". */
+            font-style: italic;
+
+            /* Código utilizado para definir o "underline" .*/
+            text-decoration: underline;
+
+        }
+
+        h1 {
+
+            /* O conjunto de aplicação de estilos font se chama "shorthand font" seguindo a exata ordem abaixo. */
+            font-style: italic;
+            font-size: 3em;
+            font-weight: bolder;
+            font-family: 'Work Sans', sans-serif;   
+
+            /* Podemos fazer agora então um "shorthand font" em apenas uma linha.*/
+            font: italic bolder 3em 'Work Sans', sans-serif;
+
+        }
+
+        h2 {
+
+            /* Quando não usamos algum conceito em "shorthand font" ele usa o conceito padrão. No caso da tag "h2" por exemplo, o conceito padrão seria este: */
+            font: bold 2em 'Work Sans';
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 51 - Tamanho de fonte e suas medidas/ex0036.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 51 - Tamanho de fonte e suas medidas</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 53 - Usando o Google Fonts/ex0038.html">Aula 53 - Usando o Google Fonts&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt;</span></a>
+    </div>
+
+    <h1>Fonte, estilo e shorthend font</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cum blanditiis nostrum pariatur in exercitationem autem ab, cupiditate sed placeat saepe aliquid voluptatum repudiandae quos, ea ipsam ratione id asperiores!</p>
+
+    <h2>Subtítulo do exercício</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fuga tenetur assumenda blanditiis ipsa, adipisci aliquam labore ullam exercitationem ipsam reprehenderit, minimamodi iure ipsum illum, soluta eius. Esse!LoremloremLorem ipsum dolor sit amet consectetur adipisicing elit. Labore, laborum laudantium aliquam nisi perferendis ratione! Ab aliquid tenetur nesciunt asperiores reiciendis, error odit. Aut numquam dicta quidem eligendi eveniet voluptatum?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque possimusminima, sapiente molestias quis aliquam dolore ullam, rerum asperiores reprehenderit veniam aspernatur ut doloremque voluptatibus id iusto eos.Nam, accusantium.</p>
+
+</body>
+</html>

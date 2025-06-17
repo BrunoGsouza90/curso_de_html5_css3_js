@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Códigos</title>
+
+</head>
+<body>
+
+    <h1>Primeiros Códigos</h1>
+
+    <div id="calc">
+
+        <label>Valor 1</label>
+        <input type="text" id="v1" value="0">
+
+        <br><br>
+
+        <label>Valor 2</label>
+        <input type="text" id="v2" value="0">
+
+        <br><br>
+
+        <p>Resultado: <span id="res">0</span></p>
+
+        <button id="btn_somarjs">Somar JS</button>
+        <button id="btn_somarjq">Somar JQ</button>
+
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        let valor1 = window.document.getElementById('v1')
+        let valor2 = window.document.getElementById('v2')
+        let resultado = window.document.getElementById('res')
+
+        /* Aqui estamos usando o JavaScript puro. */
+        window.document.querySelector('#btn_somarjs').addEventListener('click', ()=>{
+            
+            if(resultado.innerHTML == '0'){
+
+                valor1 = parseInt(valor1.value)
+                valor2 = parseInt(valor2.value)
+
+                let soma = valor1 + valor2
+
+                resultado.innerHTML = soma
+
+            } else {
+
+                let soma = parseInt(resultado.innerHTML) + valor1 + valor2
+
+                resultado.innerHTML = soma
+
+            }
+
+        })
+
+        /* Aqui estamos usando o jQuery. */
+        $("#btn_somarjq").click(() => {
+
+            if(resultado.innerHTML == '0'){
+
+                let v1 = parseInt($("#v1").val())
+                let v2 = parseInt($("#v2").val())
+
+                let soma = v1 + v2
+
+                $("#res").html(soma)
+
+            } else {
+
+                let v1 = parseInt($("#v1").val())
+                let v2 = parseInt($("#v2").val())
+                let soma = parseInt($("#res").html()) + v1 + v2
+
+                $("#res").html(soma)
+
+            }
+
+        })
+
+    </script>
+</body>
+</html>

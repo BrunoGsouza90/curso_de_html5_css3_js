@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Propriedades de Grid Template</title>
+
+    <style>
+
+        body{
+
+            font-family: Arial;
+            color: black;
+        }
+
+        /* =========================================== */
+
+        /* Aqui estamos definindo os "IDs" dos containers filhos. */
+        #header{
+
+            grid-area: header;
+
+        }
+
+        #main{
+
+            grid-area: main;
+
+        }
+        
+        #lateral{
+
+            grid-area: lateral;
+
+        }
+
+        #footer{
+
+            grid-area: footer;
+
+        }
+
+        /* =========================================== */
+
+        .container{
+
+            /* Aqui estamos declarando o display como grid. */
+            display: grid;
+
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto;
+
+            /* Aqui estamos declarando o espaço que cada container filho irá ocupar dentro do container. */
+            grid-template-areas:
+            
+            "header header header header"
+            "main main . lateral"
+            "footer footer footer footer"
+
+            ;
+
+        }
+
+        .item{
+
+            background-color: rgb(52, 52, 190);
+            color: white;
+            border: 1px solid black;
+            text-align: center;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Propriedades de Grid Template</h1>
+    
+    <div class="container">
+
+        <div class="item" id="header">HEADER</div>
+        <div class="item" id="main">MAIN</div>
+        <div class="item" id="lateral">LATERAL</div>
+        <div class="item" id="footer">FOOTER</div>
+
+    </div>
+
+</body>
+</html>

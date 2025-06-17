@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXT, VAL e HTML</title>
+</head>
+<body>
+
+    <h1>TEXT, VAL e HTML</h1>
+
+    <h2 id="caixa">CFB Cursos</h2>
+
+    <h2>Curso de jQuery</h2>
+
+    <input type="text" id="nome">
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("h2").click((event) => {
+
+            $("#nome").val(`${$(event.target).text()}`)
+
+        })
+
+        $("h2").click(function() {
+
+            window.alert(`${$(this).text()}.`)
+
+        })
+
+        $("input").click(function() {
+
+            window.alert(`${$(this).val()}.`)
+
+        })
+
+        $("h2").click(function() {
+
+            window.alert(`${$(this).html()}.`)
+
+        })
+
+    </script>
+    
+</body>
+</html>

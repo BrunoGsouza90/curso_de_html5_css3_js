@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="prism.css">
+    <title>Curso de Axios</title>
+  </head>
+  <body class="bg-slate-900">
+
+    <p class="text-4xl text-stone-100 font-medium text-center my-5 ">Curso de Axios</p>
+
+    <div id="nav_mobile" class="hidden">
+
+      <!-- Botão Menu Hamburguer. -->
+      <button id="botao_mobile" class="block mx-auto my-5 text-3xl text-white"><i class="fa-solid fa-bars"></i></button>
+
+      <!-- NavBar mobile. -->
+      <div id="menu_hamburguer" class="hidden flex-col mx-24 px-8 py-5 bg-gray-400 rounded transition duration-1200 opacity-0 mb-4">
+
+        <button id="button_get" class="mt-1 bg-purple-200 text-purple-800 rounded px-4 py-1 font-medium">GET</button>
+        <button id="button_post" class="mt-1 bg-green-200 text-green-800 rounded px-4 py-1 font-medium">POST</button>
+        <button id="button_put" class="mt-1 bg-blue-200 text-blue-800 rounded px-4 py-1 font-medium">PUT</button>
+        <button id="button_patch" class="mt-1 bg-yellow-200 text-yellow-800 rounded px-4 py-1 font-medium ">PATCH</button>
+        <button id="button_delete" class="mt-1 bg-red-200 text-red-800 rounded px-4 py-1 font-medium">DELETE</button>
+        <button id="button_multiplo" class="bg-gray-800 text-gray-300 border border-gray-500 rounded font-medium px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-gray-300 hover:text-gray-800">Multíplos</button>
+        <button id="button_transform" class="bg-gray-800 text-gray-300 border border-gray-500 rounded font-medium px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-gray-300 hover:text-gray-800">Transform</button>
+        <button id="button_errorhandling" class="bg-gray-800 text-gray-300 border border-gray-500 rounded font-medium px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-gray-300 hover:text-gray-800">Error Handling</button>
+        <button id="button_cancel" class="bg-gray-800 text-gray-300 border border-gray-500 rounded font-medium px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-gray-300 hover:text-gray-800">Cancel</button>
+        <button id="button_limpar" class="bg-gray-800 text-gray-300 border border-gray-500 rounded font-medium px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-gray-300 hover:text-gray-800">Limpar</button>
+
+      </div>
+
+    </div>
+
+    <!-- NavBar do Desktop. -->
+    <div id="nav_desktop" class="hidden flex-col">
+
+      <div class="flex justify-center mb-5">
+
+        <button id="button_get" class="bg-purple-200 text-purple-800 rounded font-medium px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer transition duration-700 hover:bg-purple-800 hover:text-purple-200">GET</button>
+        <button id="button_post" class="bg-green-200 text-green-800 rounded font-medium ms-1 px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-green-800 hover:text-green-200">POST</button>
+        <button id="button_put" class="bg-blue-200 text-blue-800 rounded font-medium ms-1 px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-blue-800 hover:text-blue-200">PUT</button>
+        <button id="button_patch" class="bg-yellow-200 text-yellow-800 rounded font-medium ms-1 px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-yellow-800 hover:text-yellow-200 ">PATCH</button>
+        <button id="button_delete" class="bg-red-200 text-red-800 rounded font-medium ms-1 px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-red-800 hover:text-red-200">DELETE</button>
+
+      </div>
+
+      <div class="flex justify-center mb-5">
+
+        <button id="button_multiplo" class="bg-gray-800 text-gray-300 border border-gray-500 rounded font-medium px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-gray-300 hover:text-gray-800">Multíplos</button>
+        <button id="button_transform" class="bg-gray-800 text-gray-300 border border-gray-500 rounded font-medium ms-1 px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-gray-300 hover:text-gray-800">Transform</button>
+        <button id="button_errorhandling" class="bg-gray-800 text-gray-300 border border-gray-500 rounded font-medium ms-1 px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-gray-300 hover:text-gray-800">Error Handling</button>
+
+      </div>
+
+      <div class="flex justify-center mb-5">
+
+        <button id="button_cancel" class="bg-gray-800 text-gray-300 border border-gray-500 rounded font-medium px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-gray-300 hover:text-gray-800">Cancel</button>
+        <button id="button_limpar" class="bg-gray-800 text-gray-300 border border-gray-500 rounded font-medium ms-1 px-4 py-1 sm:px-8 sm:py-2 md:px-13 lg:px-18 xl:px-24 2xl:px-32 cursor-pointer  transition duration-700 hover:bg-gray-300 hover:text-gray-800">Limpar</button>
+
+      </div>
+
+    </div>
+
+    <!--  -->
+    <div class="mx-auto rounded bg-slate-800 w-9/12">
+
+        <div class="flex justify-between">
+
+          <p class="m-3 text-white text-lg font-normal">Data</p>
+          <p id="status" class="m-3 bg-gray-200 rounded border font-medium border-white px-3 py-1">0</p>
+
+        </div>
+
+        <hr style="background-color: #2d2d2d;">
+
+        <pre style="margin: 0; padding: 0; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; height: 200px;">
+
+        <code class="language-js" id="code_data"></code>
+        
+        </pre>
+
+    </div>
+
+    <div id="container_header_config" class="flex mx-auto m-5 w-9/12">
+
+      <div id="container_header" class="rounded bg-slate-800 w-full me-3">
+
+        <div class="flex justify-between">
+
+          <p class="m-3 text-white text-lg font-normal">Headers</p>
+
+        </div>
+
+        <hr style="background-color: #2d2d2d;">
+
+        <pre class="language-js" style="margin: 0; padding: 0; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; height: 200px;">
+          
+        <code id="code_headers"></code>
+      
+        </pre>
+
+      </div>
+
+      <div id="container_config" class="rounded bg-slate-800 w-full ms-3">
+
+        <div class="flex justify-between">
+
+          <p class="m-3 text-white text-lg font-normal">Config</p>
+
+        </div>
+
+        <hr style="background-color: #2d2d2d;">
+
+        <pre class="language-js" style="margin: 0; padding: 0; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; height: 200px;">
+
+        <code id="code_config"></code>
+        
+        </pre>
+
+      </div>
+
+    </div>
+
+    <script type="module" src="axios.js"></script>
+    <script src="prism.js"></script>
+
+  </body>
+
+</html>

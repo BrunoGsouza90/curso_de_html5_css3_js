@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações - Keyframes</title>
+
+    <style>
+
+        * {
+
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+
+        #botao_pausar {
+
+            width: 150px;
+            height: 60px;
+            margin: 20px;
+            font: italic bold 1.5em cursive;
+            background-color: rgb(44, 192, 241);
+            border: 1px solid rgb(29, 199, 255);
+            border-radius: 5px;
+            cursor: pointer;
+
+            transition-property: background-color, border;
+
+            transition-duration: 1s;
+
+            transition-timing-function: ease-in-out;
+
+        }
+
+        #botao_pausar:hover {
+
+            background-color: rgb(251, 67, 67);
+            border: 1px solid rgb(254, 50, 50);
+
+        }
+
+        #nave {
+
+            position: absolute;
+            bottom: 40%;
+            left: 3%;
+
+            /* O nome da animação que será executada. */
+            animation-name: fly;
+
+            /* O tempo de duração da animação. */
+            animation-duration: 3s;
+
+            /* A dureza ou suavidade de como a animação irá se comportar. */
+            animation-timing-function: ease-in-out;
+
+            /* O tempo que animação irá iniciar após o carregamento da página. */
+            animation-delay: 1s;
+
+            /* Número de vezes que a animação irá ocorrer. Podemos usar inifinity para ser repetida infinitamente. */
+            animation-iteration-count: infinite;
+
+            /* Defini a direção da animação. */
+            animation-direction: alternate;
+
+            /* Defini qual será o estado na animação no seu fim.
+            
+                forwads - Determina que a animação ficará no seu último estado.
+                backwards - Manterá a animação no seu estado inicial.
+            */
+            animation-fill-mode: forwards;
+
+            /* Defini se animação está em execução ou se está parada. Clique no botão de pausar no ínicio da tela. */
+            animation-play-state: running;
+
+            /* A short-hand para "animation". */
+            animation: fly 3s ease-in-out 1s infinite alternate forwards running;
+
+        }
+
+        body {
+
+            position: relative;
+
+            height: 100vh;
+            width: 100vw;
+
+            background-image: url(Imagens/Fundo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+        }
+
+        /* Keyframe que será utilizada nas propriedades. Definimos os intervalos em porcentagem. */
+        @keyframes fly {
+
+            0% {
+
+                transform: translateX(0);
+
+            }
+
+            50% {
+
+                transform: translate(calc(50vw - 100px), -300px);
+
+            }
+
+            100% {
+
+                transform: translateX(calc(100vw - 300px));
+
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <button id="botao_pausar">Pausar</button>
+
+    <div id="nave">
+
+        <img width="200px" src="./Imagens/nave.png" alt="Nave">
+
+    </div>
+
+    <script>
+
+        const botao_pausar = window.document.querySelector("#botao_pausar")
+        
+        const nave = window.document.querySelector("#nave")
+
+        botao_pausar.addEventListener("click", () => {
+
+            if(nave.style.animationPlayState == "paused") {
+
+                nave.style.animationPlayState = "running"
+
+                botao_pausar.innerHTML = "Pausar"
+
+            } else {
+
+                nave.style.animationPlayState = "paused"
+
+                botao_pausar.innerHTML = "Animar"
+
+            }
+
+        })
+
+    </script>
+    
+</body>
+</html>

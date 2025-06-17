@@ -1,0 +1,50 @@
+@charset "utf8";
+
+h1.titulo {
+
+    background-color: lightgray;
+    height: 300px;
+    width: 300px;
+
+    /* Aqui configuramos a largura da borda. */
+    border-width: 10px;
+
+    /* Aqui configuramos o estilo da borda.
+
+        Temos os seguintes estilos de borda:
+        
+        solid   →   Borda padrão. Ela é sólida.
+        none    →   Sem borda.
+        hidden  →   Sem borda, mas usado em tabelas quando você quer ocultar bordas de um lado de uma célula. 
+        double  →   Borda dupla.
+        dashed  →   Borda tracejada.
+        dotted  →   Borda pontilhada.
+        outset  →   Borda que faz parecer que o elemento está elevado.
+        inset   →   Borda que faz parecer que o elemento está afundado.
+        ridge   →   Borda em relevo, parece como se estivesse elevada.
+        groove  →   Borda em relevo, parece como se estivesse embutida. */     
+    border-style: groove;
+
+    /* Aqui determinamos a cor da borda. */
+    border-color: rgba(47, 79, 79, 0.384);
+
+    /* Aqui determinamos o espaço interno acima do elemento antes da borda. */
+    padding-top: 10px;
+
+    /* Aqui determinamos o espaço interno abaixo do elemento antes da borda. */
+    padding-bottom: 10px;
+
+    /* Aqui determinamos o espaço interno do lado esquerdo do elemento antes da borda. */
+    padding-right: 10px;
+
+    /* Aqui determinamos o espaço interno do lado direito do elemento antes da borda. */
+    padding-left: 10px;
+}
+
+a.link {
+
+    border-width: 10px;
+    border-style: solid;
+    border-color: red;
+    
+}

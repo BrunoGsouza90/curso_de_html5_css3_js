@@ -1,0 +1,51 @@
+@charset "utf8";
+
+html {
+    background-color: rgba(255, 127, 227, 0.164);
+}
+
+main{
+    margin: auto;
+    margin-top: 15%;
+    min-width: 250px;
+    max-width: 1000px;
+    padding: 30px;
+    padding-bottom: 50px;
+    background-color: rgba(35, 177, 66, 0.432);
+    border: 0.3px solid rgba(0, 0, 0, 0.281);
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.377);
+    text-align: center;
+}
+
+main h1{
+    font: italic 3em cursive;
+    color: rgb(29, 29, 29);
+}
+
+main p#contador{
+    font: lighter 2em cursive;
+}
+
+main p#erro{
+    background-color: rgba(255, 0, 0, 0.336);
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 0.3px solid rgba(255, 0, 0, 0.342);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.274);
+    font-size: 1.3em;
+}
+
+main button{
+    font-family: cursive;
+    height: 70px;
+    width: 180px;
+    font-size: 17px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: 0.2px solid black;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollTop e scrollLeft</title>
+
+    <style>
+
+        .cor {
+
+            color: lightcoral;
+
+        }
+
+        .menu {
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #texto {
+
+            margin-top: 10px;
+            border: 1px solid black;
+            width: 100px;
+            height: 200px; overflow: auto;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>scrollTop e scrollLeft</h1>
+
+    <div class="menu">
+        
+        <button id="bt_rolar_left">Rolar Left</button>
+        
+        <button id="bt_rolar_top">Rolar Top</button>
+        
+        <button id="bt_pos_left">Obter Posição Left</button>
+        
+        <button id="bt_pos_top">Obter Posição Top</button>
+        
+        <button id="bt_reset_pos">Resetar Posição</button>
+    
+    </div>
+
+    <div id="texto">
+        
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam reprehenderit maiores, repellendus eveniet itaque sit. Eius soluta cupiditate aliquam eum beatae amet expedita quisquam, aliquid repudiandae porro sit minima vitae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, nulla deserunt. Soluta quaerat aliquam nobis reprehenderit voluptates molestiae necessitatibus ratione possimus, ullam, officiis quos impedit amet quod explicabo! Quibusdam, neque.</p>
+    
+    </div>
+
+    <!-- Aqui estamos fazendo a chamada do jQuery. -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("#bt_rolar_left").click(() => {
+
+            $("#texto").scrollLeft(15)
+
+        })
+
+        $("#bt_rolar_top").click(() => {
+
+            $("#texto").scrollTop(150)
+
+        })
+
+        $("#bt_pos_left").click(() => {
+
+            window.alert($("#texto").scrollLeft())
+
+        })
+
+        $("#bt_pos_top").click(() => {
+
+            window.alert($("#texto").scrollTop())
+
+        })
+
+        $("#bt_reset_pos").click(() => {
+
+            $("#texto").scrollLeft(0).scrollTop(0)
+
+        })
+
+    </script>
+    
+</body>
+</html>

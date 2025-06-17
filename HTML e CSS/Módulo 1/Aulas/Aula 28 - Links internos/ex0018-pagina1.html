@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links internos - Página 1</title>
+</head>
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 27 - Links e Âncoras em HTML5/ex0017.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 27 - Links e Âncoras em HTML5</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 29 - Links para download/ex0019.html">Aula 29 - Links para download&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt;</span></a>
+    </div>
+
+    <h1>Usando links internos</h1>
+
+    <!-- Ao fazer uma referência de avanço em páginas utilize o atributo "rel="next"; e para voltar "rel="prev". -->
+    <p>Está é a primeira página do site. Pode acessar a minha <a href="ex0018-pagina2.html" rel="next">segunda página</a>.</p>
+
+    <!-- Ao usar links internos utilize o comando "Ctrl + Espaço" para acessar pastas que estão no mesmo diretório do arquivo principal. Caso a página esteja em outro diretório, coloque o link deste; ou utilize ( ./ ) ; a quantidade de pontos é o quanto você quer voltar.-->
+    <p>Você também pode acessar a nossa <a href="Noticias/ex0018-pagina3.html">página de notícias</a>.</p>
+    
+    <h1>Estamos fazendo menção nesse momento da <a href="../Aula 29 - Links para download/ex0019.html">Aula 29: ex0019.html</a>.</h1>
+
+    <h2>Links para download</h2>
+
+    <!-- Para fazer um link vazio utilize o contéudo "#" .-->
+    <p><a href="#">Link vazio</a>.</p>
+
+    <!-- Para permitir o download adicione o atributo "download="tipo_do_arquivo" ."-->
+    <p><a href="../Aula 29 - Links para download/Livro/Eric.Matthes - Curso Intensivo de Python.pdf" download="Curso Intensivo de Python.pdf">Baixar o livro em PDF</a>.</p>
+
+    <p><a href="../Aula 29 - Links para download/Livro/Eric.Matthes - Curso Intensivo de Python.rar" download="Curso Intensivo de Python.rar">Livro compactado em Winrar.</a></p>
+     
+    <!-- Conheça a iana.org um site que retrata a natureza oficial dos documentos.-->
+    <h2>Site de referência: <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="nofollow">IANA.ORG</a>.</h2>
+
+    <!-- Neste exemplo estamos usando o atributo type="application/msword" que é pra arquivos MicroSoft Word extenção "doc" .-->
+    <p><a href="../Aula 29 - Links para download/Livro/Comandos Git.docx" download="Apostila de Git" type="aplication/wsword">Apostila de Git</a>.</p>
+    
+</body>
+</html>

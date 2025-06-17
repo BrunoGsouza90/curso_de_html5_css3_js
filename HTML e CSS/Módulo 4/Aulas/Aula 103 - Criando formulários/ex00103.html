@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando formulários</title>
+
+    <style>
+
+        * {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 102 - Criando um projeto do zero/ex00102.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 102 - Criando um projeto do zero</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 104 - Media Queries/ex00104.html">  &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt; Aula 104 - Media Queries</span></a>
+    </div>
+
+    <h1>Criando formulários</h1>
+
+    <form action="cadastro.html" method="post" autocomplete="on">
+
+        <fieldset>
+
+            <legend>Dados Pessoais</legend>
+
+            <p>
+
+                <label for="iusu">Usuário: </label>
+                <input type="text" name="usu" id="iusu" required minlength="5" maxlength="30" size="25" placeholder="Digite o nome do usuário...">
+
+            </p>
+
+            <p>
+
+                <label for="isen">Senha: </label>
+                <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="25" placeholder="Digite sua senha..." autocomplete="new-password">
+
+            </p>
+
+            <p>
+
+                <label for="inumero">Número: </label>
+                <input type="number" name="numero" id="inumero" min="0" max="10" step="0.5">
+
+            </p>
+
+            <p>
+
+                <label for="itelefone">Telefone: </label>
+                <input type="tel" name="telefone" id="itelefone" autocomplete="tel" required pattern="^[0-9]{4}-[0-9]{4}$">
+
+            </p>
+
+            <p>
+
+                <label for="imes">Perído letivo: </label>
+                <input type="month" name="mes" id="imes" value="2024-11">
+
+            </p>
+
+            <p>
+
+                <label for="calendario">Dia da prova: </label>
+                <input type="date" name="calendario" id="icalendario">
+
+            </p>
+
+            <p>
+
+                <label for="ihora">Horário da prova: </label>
+                <input type="time" name="hora" id="ihora">
+
+            </p>
+
+            <p>
+
+                <label for="iemail">Email: </label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+
+            </p>
+
+            <input type="checkbox" name="esbas" id="iesbas" checked> <label for="iesbas">Basquete</label><br>
+
+            <input type="checkbox" name="esfut" id="iesfut" checked> <label for="iesfut">Futebol</label><br>
+
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label><br>
+
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label><br>
+
+            <input name="sexo" type="radio" name="masc" id="imasc" value="M">
+            <label for="imasc">Masculino</label>
+
+            <input name="sexo" type="radio" name="fem" id="ifem" value="F">
+            <label for="ifem">Feminino</label>
+
+            <p>
+
+                <label for="icor">Cor: </label>
+                <input type="color" name="color" id="icor" value="#00ff00">
+
+            </p>
+
+            <p>
+
+                <label for="inivel">Nível de Satisfação: </label>
+                <input type="range" name="nivel" id="inivel" min="1" max="5" value="0">
+
+            </p>
+
+            <p>
+
+                <label for="ifoto">Foto de perfil: </label>
+                <input type="file" name="foto" id="ifoto">
+
+            </p>
+
+            <p>
+
+                <label for="iest">Estado: </label>
+                <select name="estado" id="iestado">
+
+                    <option value="" selected>--- Escolha ---</option>
+
+                    <optgroup label="Região Sudeste">
+
+                        <option value="SP">São Paulo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+
+                    </optgroup>
+
+                    <optgroup label="Região Nordeste">
+
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="MA">Maranhão</option>
+
+                    </optgroup>
+
+                </select>
+
+            </p>
+
+            <p>
+
+                <label for="iprof">Profissão: </label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+
+                <datalist id="lstprof">
+
+                    <option value="ADM">Administrador</option>
+                    <option value="CONT">Contabilista</option>
+                    <option value="DEV">Desenvolvedor</option>
+                    <option value="PROF">Professor</option>
+
+                </datalist>
+
+            </p>
+
+            <p>
+
+                <label for="imsg">Mensagem: </label><br>
+                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+
+            </p>
+
+            <p>
+
+                <label for="in1">Número 1: </label>
+                <input type="number" name="n1" id="in1" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+
+                <label for="in2">Número 2: </label>
+                <input type="number" name="n2" id="in2" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+
+            </p>
+
+            <p>
+
+                <label for="isoma">Soma: </label>
+                <output name="soma" id="isoma">0</output>
+
+            </p>
+
+            <p>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+
+            </p>
+
+            <p>
+
+                <label for="inum">Número: </label>
+                <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+                <output id="ival">5</output>
+
+            </p>
+
+            <p>
+
+                <label for="iano">Em que ano você nasceu?</label>
+                <input type="date" name="ano" id="iano" oninput="iidade.innerHTML = `${new Date().getFullYear() - iano.value.slice(0,4)} anos.`">
+
+            </p>
+
+            <p>
+
+                <label for="iidade">Sua idade é: </label>
+                <output id="iidade">0</output>
+                
+            </p>
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append e AppendTo</title>
+
+    <style>
+
+        .caixa {
+
+            background-color: #bbb;
+            border: 3px solid #000;
+            border-radius: 10px;
+            padding: 10px 0px 0px 0px;
+            margin: 10px 0px 0px 0px;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+
+        }
+
+        .subcaixa {
+
+            margin: 0px 0px 10px 10px;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 5px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Append e AppendTo</h1>
+
+    <div id="content">
+
+        <button id="btnAdicionar">Adicionar</button>
+
+        <button id="btnAdicionarEm">Adicionar Em</button>
+
+        <button id="btnLimpar">Limpar</button>
+
+    </div>
+
+    <div class="caixa" id="caixa">
+
+
+
+    </div>
+
+    <!-- Aqui estamos fazendo a chamada do jQuery. -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("#btnAdicionar").on({
+
+            click:() => {
+
+                let cor = `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`
+
+                $("#caixa").append(`<div style="background-color: ${cor};" class="subcaixa">Cor: ${cor}</div>`)
+
+            }
+
+        })
+
+        $("#btnLimpar").on({
+
+            click:() => {
+
+                $("#caixa").html('')
+
+            }
+
+        })
+
+        $("#btnAdicionarEm").on({
+
+            click:() => {
+
+                let cor = `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`
+
+                $(`<div style="background-color: ${cor};" class="subcaixa">Cor: ${cor}</div>`).appendTo($("#caixa"))
+
+            }
+
+        })
+
+    </script>
+    
+</body>
+</html>

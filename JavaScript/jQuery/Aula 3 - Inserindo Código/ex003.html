@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserindo Código</title>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <!-- Podemos fazer a manipulação DOM antes do HTML. Basta usarmos o argumento "document".. -->
+    <script>
+
+        $(document).ready(rodar)
+
+        function rodar(){
+
+            $("#texto1").text('CFB Cursos')
+
+        }
+
+        $(document).ready(() => {
+
+            $("#texto2").text('CFB Cursos')
+
+        })
+
+    </script>
+</head>
+<body>
+
+    <h1>Inserindo Código</h1>
+
+    <p id="texto1"></p>
+    
+    <p id="texto2"></p>
+
+</body>
+</html>

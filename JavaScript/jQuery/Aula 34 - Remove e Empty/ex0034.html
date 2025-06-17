@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove e Empty</title>
+
+    <style>
+
+        .caixa {
+
+            background-color: white;
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0px 0px 0px;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+
+        }
+
+        .subcaixa {
+
+            width: 100px;
+            height: 100px;
+            margin: 10px 0px 10px 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+            border-radius: 5px;
+            border: 3px solid black;
+            background-color: lightcoral;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Remove e Empty</h1>
+
+    <button id="btnAdicionar">Adicionar</button>
+    
+    <button id="btnRemover">Remover</button>
+    
+    <button id="btnRemoverConteudo">Remover Conteúdo</button>
+
+    <div id="caixa" class="caixa">
+
+        <div id="d0" class="subcaixa">
+            
+            <p>0</p>
+        
+        </div>
+
+        <div id="d1" class="subcaixa">
+            
+            <p>1</p>
+        
+        </div>
+
+        <div id="d2" class="subcaixa">
+            
+            <p>2</p>
+        
+        </div>
+
+        <div id="d3" class="subcaixa">
+            
+            <p>3</p>
+        
+        </div>
+
+    </div>
+
+    <!-- Aqui estamos fazendo a chamada do jQuery. -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        let num = 4
+
+        $("#btnAdicionar").click(() => {
+
+            $("#caixa").append(`<div id="d${num}" class="subcaixa">${num}</div>`)
+
+            num++
+
+        })
+
+        $("#btnRemover").click(() => {
+
+            let elemento = window.prompt('Qual elemento você deseja remover?')
+
+            if($(`#d${elemento}`).html() == undefined){
+
+                window.alert('Esse elemento não existe!')
+
+            } else {
+
+                $(`#d${elemento}`).remove()
+
+            }
+
+        })
+
+        $("#btnRemoverConteudo").click(() => {
+
+            let elemento = window.prompt('Qual elemento você deseja remover?')
+
+            if($(`#d${elemento}`).html() == undefined){
+
+                window.alert('Esse elemento não existe!')
+
+            } else {
+
+                $(`#d${elemento}`).empty()
+
+            }  
+
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,83 @@
+@charset "utf8";
+
+body {
+
+    font-family: cursive;
+
+}
+
+div.Pseudo-classes {
+
+    background-color: lightgray;
+    text-align: center;
+
+    /* Configuração para ficar tudo na mesma linha. */
+    display: inline-block;
+
+    /* Aqui estamos informando a altura. */
+    height: 200px;
+
+    /* Aqui estamos informando a largura. */
+    width: 200px;
+
+    /* Aqui estamos criando uma borda de 1px de espessura, que será "solid" (Linha Contínua)  */
+    border: 1px solid black;
+
+}
+
+/* Toda "Pseudo-classe" é determinada por ":". Aqui neste caso estamos usando uma Pseudo-classe do tipo hover que será ativa sempre que estivermos com o mouse emcima.*/
+div.Pseudo-classes:hover {
+
+    background-color: blue;
+
+}
+
+
+
+div#hover {
+    
+    /* Configuração de um elemento flexível. */
+    display: flex;
+    
+    /* Configuração "flex" que permiti que os itens fiquem alinhados em colunas. */
+    flex-direction: column;
+
+    /* Alinha os itens do container verticalmente. */
+    align-items: center;
+
+    /* Alinha os itens do container horinzontalmente. */
+    justify-content: center;
+
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: lightgray;
+
+}
+
+div#hover:hover {
+
+    background-color: rgba(255, 0, 0, 0.418);
+
+}
+
+/* Aqui estamos configurando uma Pseudo-classe para um elemento filho dentro de uma div. Nesse caso o elemento específico é um paragráfo. */
+div#hover > p {
+
+    /* Configuração para sumir com elemento dentro de uma página, não permitindo que ele ocupe algum espaço no layout.*/
+    display: none;
+
+}
+
+div#hover:hover > p {
+
+    /* Configuração no elemento para que ele apareça ao passar com o mouse emcima da div. */
+    display: block;
+
+    color: white;
+    background-color: rgba(45, 161, 70, 0.418);
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    
+}

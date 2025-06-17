@@ -1,0 +1,21 @@
+@charset "uft8";
+
+h1 {
+
+    border: 8px solid black;
+    padding: 10px;
+
+    /* Aqui estamos acrecentando um imagem como borda. */
+    border-image-source: url('borda.png');
+
+    /* Aqui estamos fazendo o espalhamento da borda. */
+    border-image-slice: 27;
+
+    /* Aqui configuramos a repetição da imagem. Podemos também usar o "stretch" que é o método padrão. */
+    border-image-repeat: repeat;
+
+    /* A configuração Short-Hands para o "border-image" é:
+    
+    border-image: url('borda.png') 27 repeat;  */
+    
+}

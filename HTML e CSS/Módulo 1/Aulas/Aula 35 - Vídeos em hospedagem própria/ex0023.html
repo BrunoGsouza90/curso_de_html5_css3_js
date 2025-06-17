@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos em hospedagem própria</title>
+</head>
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 12pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 33 - Colocando áudio no seu site/ex0022.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 33 - Colocando áudio no seu site</a>
+        <a style="font-size: 12pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 36 - Incorporação de Vídeos Externos/ex0024.html">Aula 36 - Incorporação de Vídeos Externos&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt;</span></a>
+    </div>
+
+    <h1>Inseredindo vídeos hospedados localmente</h1>
+
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+
+    <!-- Inserimos vídeos assim como áudios. -->
+
+    <!-- Obs.: Devemos colocar dessa forma pois será testado cada tipo de vídeo, e no final caso nenhum seja compativel com o navegador a mensagem exibida no parágrafo é renderizada na tela. -->
+    <video preload="metadata" width="500" controls loop autoplay>
+
+        <source src="Vídeos/Vídeo mp4.mp4" type="video/mp4">
+
+        <source src="Vídeos/Vídeo mkv.mkv" type="video/mkv">
+
+        <source src="Vídeos/Vídeo Original.mp4" type="video/mp4">
+
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+
+        <a href="Vídeos/Vídeo mp4.mp4" download="Vídeos/Vídeo mp4.mp4" type="application/mp4">Clique aqui para fazer o download do vídeo em formato MP4.</a>
+
+    </video>
+
+</body>
+</html>

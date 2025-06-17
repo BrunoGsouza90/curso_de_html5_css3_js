@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas grandes</title>
+    <style>
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        table {
+
+            margin: 0 auto;
+            margin-top: 70px;
+            margin-bottom: 150px;
+            width: 500px;
+            border-collapse: collapse;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.349);
+
+        }
+
+        caption {
+
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightblue;
+            border-radius: 5px 5px 0px 0px;
+            border: 1px solid black;
+
+        }
+
+        tbody > tr:nth-child(odd) {
+
+            background-color: white;
+
+        }
+
+        tbody > tr:nth-child(even) {
+
+            background-color: rgba(211, 211, 211, 0.63);
+
+        }
+
+        thead, tfoot {
+
+            background-color: gray;
+            color: white;
+
+        }
+
+        thead {
+
+            position: sticky;
+            top: 0;
+
+        }
+
+        td, th {
+
+            border: 1px solid black;
+            padding: 10px;
+
+        }
+
+        .numero {
+            
+            text-align: right;
+            width: 100px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 88 - Minha primeira tabela/ex0088.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt;Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 88 - Minha primeira tabela</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 90 - Mesclagem de células/ex0090.html">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt; Aula 90 - Mesclagem de células</span></a>
+    </div>
+
+    <h1>Tabelas grandes</h1>
+
+    <table>
+
+        <caption>( População das Unidades Federativas )</caption>
+
+        <thead>
+
+            <tr id="cabecalho">
+                <th>Estado</th>
+                <th>População</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>São Paulo</td>
+                <td class="numero">45 919 049</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Minas Gerais</td>
+                <td class="numero">21 168 791</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Rio de Janeiro</td>
+                <td class="numero">17 264 943</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Bahia</td>
+                <td class="numero">17 850 513</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Paraná</td>
+                <td class="numero">11 824 665</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Rio Grande do Sul</td>
+                <td class="numero">11 229 915</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Pernambuco</td>
+                <td class="numero">9 539 029</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Ceará</td>
+                <td class="numero">9 233 656</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Pará</td>
+                <td class="numero">8 664 306</td>
+
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+
+            <tr>
+
+                <th>Total de Habitantes</th>
+                <td id="resultado" class="numero"></td>
+
+            </tr>
+            
+        </tfoot>
+
+    </table>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta culpa repellat corrupti, consectetur minima voluptatibus, est non maxime harum laborum nesciunt consequuntur consequatur necessitatibus quasi numquam, animi molestiae modi suscipit.lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dolor voluptate quae enim dolorum omnis illo, cupiditate corrupti tempore, quos fugiat nulla tenetur sapiente animi odio cumque error iure maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. A, doloribus, sit itaque obcaecati perspiciatis modi fugiat aperiam id repellat repellendus consequuntur tempora cumque odit praesentium! Velit dolores laborum quis ut.</p>
+
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta culpa repellat corrupti, consectetur minima voluptatibus, est non maxime harum laborum nesciunt consequuntur consequatur necessitatibus quasi numquam, animi molestiae modi suscipit.lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dolor voluptate quae enim dolorum omnis illo, cupiditate corrupti tempore, quos fugiat nulla tenetur sapiente animi odio cumque error iure maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. A, doloribus, sit itaque obcaecati perspiciatis modi fugiat aperiam id repellat repellendus consequuntur tempora cumque odit praesentium! Velit dolores laborum quis ut.</p>
+
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta culpa repellat corrupti, consectetur minima voluptatibus, est non maxime harum laborum nesciunt consequuntur consequatur necessitatibus quasi numquam, animi molestiae modi suscipit.lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dolor voluptate quae enim dolorum omnis illo, cupiditate corrupti tempore, quos fugiat nulla tenetur sapiente animi odio cumque error iure maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. A, doloribus, sit itaque obcaecati perspiciatis modi fugiat aperiam id repellat repellendus consequuntur tempora cumque odit praesentium! Velit dolores laborum quis ut.</p>
+
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta culpa repellat corrupti, consectetur minima voluptatibus, est non maxime harum laborum nesciunt consequuntur consequatur necessitatibus quasi numquam, animi molestiae modi suscipit.lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dolor voluptate quae enim dolorum omnis illo, cupiditate corrupti tempore, quos fugiat nulla tenetur sapiente animi odio cumque error iure maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. A, doloribus, sit itaque obcaecati perspiciatis modi fugiat aperiam id repellat repellendus consequuntur tempora cumque odit praesentium! Velit dolores laborum quis ut.</p>
+
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta culpa repellat corrupti, consectetur minima voluptatibus, est non maxime harum laborum nesciunt consequuntur consequatur necessitatibus quasi numquam, animi molestiae modi suscipit.lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel dolor voluptate quae enim dolorum omnis illo, cupiditate corrupti tempore, quos fugiat nulla tenetur sapiente animi odio cumque error iure maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. A, doloribus, sit itaque obcaecati perspiciatis modi fugiat aperiam id repellat repellendus consequuntur tempora cumque odit praesentium! Velit dolores laborum quis ut.</p>
+
+    <script>
+
+        "use strict"
+        let resultado = window.document.querySelector('#resultado')
+        let estados = [...window.document.querySelectorAll('.numero')]
+        let total = 0
+
+        estados.forEach(estado =>{
+            let numero = estado.innerHTML.replace(/\s+/g, '');
+            total += Number(numero)
+        })
+
+        resultado.innerHTML = total.toLocaleString('de-DE').replace(/\./g, ' ')
+
+    </script>
+
+</body>
+</html>

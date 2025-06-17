@@ -1,0 +1,89 @@
+@charset "utf8";
+
+h1.titulo {
+
+    background-color: lightgray;
+    height: 300px;
+    width: 300px;
+
+    border-width: 10px;
+    border-style: groove;
+    border-color: rgba(47, 79, 79, 0.384);
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    /* Aqui determinamos o espaço externo acima do elemento depois da borda. */
+    margin-top: 10px;
+
+    /* Aqui determinamos o espaço externo abaixo do elemento depois da borda. */
+    margin-bottom: 10px;
+
+    /* Aqui determinamos o espaço externo ao lado direito do elemento depois 
+            da borda. */
+    margin-right: 10px;
+
+    /* Aqui determinamos o espaço externo ao lado esquerdo do elemento depois da borda. */
+    margin-left: 10px;
+
+    /* Aqui configuramos o espaço externo que faz parte da margem. Como a margem tem 10px estamos ocupando 5px desta. */
+    outline-width: 5px;
+
+    /* Configuração do espaço externo ocupado na margem para pontilhado. */
+    outline-style: dashed;
+
+}
+
+h1#titulo_centralizado {
+
+    background-color: lightgray;
+    height: 300px;
+    width: 300px;
+
+    border-width: 10px;
+    border-style: groove;
+    border-color: rgba(47, 79, 79, 0.384);
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    /* Configuração de margin para os lados direito e esquerdo, mantendo o box centralizado */
+    margin: auto;
+
+}
+
+h1#titulo_short-hands {
+
+    background-color: lightgray;
+    height: 300px;
+    width: 300px;
+
+    /* Aqui estamos usando configurações short-hands para simplificar o uso do "border", "margin", "padding" e "outline". */
+    border: 10px solid darkslategray;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    outline: 5px dashed gray;
+
+}
+
+a.link {
+
+    border-width: 10px;
+    border-style: solid;
+    border-color: red;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    
+}

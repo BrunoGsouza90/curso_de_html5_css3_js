@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <h1>Estamos em que momento?</h1>
+    <p>Este aplicativo trabalhara de um jeito legal dependendo que horas são:</p>
+    <p>Fundo do site:</p>
+    <ul>
+        <li>Verde: 00:01 às 06:00</li>
+        <li>Azul: 06:01 às 12:00</li>
+        <li>Amarelo: 12:01 às 18:00</li>
+        <li>Vermelho: 18:01 às 00:00</li>
+        <li>Cinza: Horário inexistente</li>
+    </ul>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        switch (true){
+            case hora > 0 && hora <= 6:
+                document.body.style.background = 'rgba(0, 128, 0, 0.6)'
+                break
+            case hora > 6 && hora <= 12:
+                document.body.style.background = 'rgba(0, 0, 255, 0.6)'
+                break
+            case hora > 12 && hora <= 18:
+                document.body.style.background = 'rgba(255, 255, 0, 0.6)'
+                break
+            case hora > 18 && hora <= 24:
+                document.body.style.background = 'rgba(255, 0, 0, 0.6)'
+                break
+            default:
+                document.body.style.background = 'rgba(200, 200, 200, 0.6)'
+        }
+    </script>
+</body>
+</html>

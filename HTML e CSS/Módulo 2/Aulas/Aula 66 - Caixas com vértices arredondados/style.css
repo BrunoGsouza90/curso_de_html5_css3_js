@@ -1,0 +1,98 @@
+@charset "utf8";
+
+body {
+
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, rgba(0, 0, 255, 0.24), rgba(128, 0, 128, 0.295));
+
+}
+
+header {
+
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+nav {
+
+    background-color: rgb(85, 85, 85);
+    padding: 3px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315); 
+}
+
+nav > a {
+
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 30px;
+
+}
+
+nav > a:hover {
+
+    text-decoration: underline;
+
+}
+
+main {
+
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    
+    /* Aqui configuramos o arredondamento da borda.
+        
+    Podemos determinar de forma geral "border-radius": (n)px; ou determinar lados específicos sendo.
+            
+    border-radius-top-left: n(px);
+    border-radius-top-right: n(px);
+    border-radius-bottom-right: n(px);
+    border-radius-bottom-left: n(px);
+    
+    border-radius: n(px) n(px) n(px) n(px); */
+    border-radius: 20px 20px 20px 20px;
+
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.308);
+
+}
+
+article {
+
+    background-color: lightgray;
+
+}
+
+article > aside {
+
+    background-color: rgb(151, 151, 151);
+
+}
+
+footer {
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    margin: 0px;
+
+}
+
+footer > p {
+
+    margin: 0;
+
+}
+
+div#bola {
+
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    
+}

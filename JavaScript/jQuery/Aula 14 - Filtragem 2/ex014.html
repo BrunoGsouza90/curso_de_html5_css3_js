@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtragem Parte 2</title>
+    <style>
+
+        p {
+
+            background-color: lightyellow;
+            max-width: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+
+        }
+
+        h3 {
+
+            background-color: lightyellow;
+            max-width: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+
+        }
+
+        .borda {
+
+            background-color: lightgreen;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Filtragem Parte 2</h1>
+
+    <p class="borda">CFB Cursos</p>
+    <h3>Curso de canvas</h3>
+
+    <p>youtube.com/cfbcursos</p>
+    <h3>www.cfbcursos.com.br</h3>
+
+    <p>Filtrando elementos</p>
+    <h3 class="borda">CFB Cursos</h3>
+
+    <p>Curso de canvas</p>
+    <h3>youtube.com/cfbcursos</h3>
+
+    <p class="borda">www.cfbcursos.com.br</p>
+    <h3>Filtrando elementos</h3>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+    <script>
+
+        $("p, h3").filter('.borda').css({'border': '3px solid red'})
+
+        $("p, h3").not('.borda').css({'border': '3px solid blue'})
+
+    </script>
+
+</body>
+</html>

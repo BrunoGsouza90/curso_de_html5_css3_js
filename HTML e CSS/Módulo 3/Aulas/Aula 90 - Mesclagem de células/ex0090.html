@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclagem de células</title>
+    <style>
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        table {
+
+            margin: 0 auto;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            border-collapse: collapse;
+            width: 300px;
+
+        }
+
+        td {
+
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 89 - Tabelas grandes/ex0089.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 89 - Tabelas grandes</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 91 - Desafios (Parte 1)/ex0091.html">  &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt;Aula 91 - Desafios &lpar; Parte 1 &rpar;</span></a>
+    </div>
+
+    <h1>Mesclagem de células</h1>
+
+    <table>
+
+        <tr>
+            <td>A</td>
+
+            <!-- Aqui estamos fazendo uma espação de coluna. -->
+            <td colspan="2">B</td>
+
+        </tr>
+
+        <tr>
+
+            <!-- Aqui estamos fazendo uma espação de linha. -->
+            <td rowspan="2">D</td>
+            <td>E</td>
+            <td rowspan="2">F</td>
+
+        </tr>
+
+        <tr>
+
+            <td>H</td>
+
+        </tr>
+
+        <tr>
+
+            <td colspan="3">M</td>
+            
+        </tr>
+
+    </table>
+
+</body>
+</html>

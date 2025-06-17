@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+
+        /* Primeiro conteiner. */
+        div.conteiner{
+
+            background-color: lightsalmon;
+            height: 100px;
+
+            display: flex;
+
+            /* Faça os testes:
+            
+                row, column, row-reverse e column-reverse.
+
+            */
+            /* flex-direction: row-reverse; */
+
+            /*
+            
+                nowrap = Ele não quebra os items de coluna.
+                wrap = Ele quebra os items quando atingem o final do conteiner.
+
+                wrap-reverse = Ele faz a quebra no sentido oposto.
+
+            */
+            /* flex-wrap: wrap-reverse; */
+
+            /* Podemos substituir o exemplo acima por isso. */
+            flex-flow: row wrap;
+
+            /* Usado para fazer o alinhamento dos itens.
+
+                flex-start = Padrão. Ele mantém os itens alinhados a esquerda.
+
+                flex-end = Mantém os itens alinhados a direita.
+
+                flex-center = Mantém os itens alinhados no centro do conteiner.
+
+                space-between = O primeiro item fica no flex-start e o último item fica no flex-end.
+
+                space-evenly = Mantém todos os itens espalhados com o mesmo espaçamento entre os elementos, não permitindo que eles encostem nas bordas.
+
+                space-around = Dívidira os espaços dos iguais no conteiner.
+
+            */
+            justify-content: space-around;
+
+            /* Faz a mesma coisa que o justify-content porém no eixo contrário. 
+                Aqui o padrão é "stretch".
+            */
+            align-content: stretch;
+
+        }
+
+        div.item{
+
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+
+            /* Retira os espaços em branco do conteiner, fazendo que os filhos ocupem todo espaço do conteiner pai.
+                A quebra ocorre quando o contéudo fica compacto.
+            */
+            /* flex: auto; */
+
+        }
+
+        /* Segundo conteiner. */
+        div.conteiner1{
+
+            background-color: lightsalmon;
+            height: 500px;
+            width: 500px;
+
+            display: flex;
+            flex-flow: row wrap;
+
+            justify-content: center;
+            align-content: center;
+
+        }
+
+        div.item1{
+
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        /* Terceiro conteiner. */
+        div.conteiner2{
+
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+
+        }
+
+        div.item2{
+
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        /* Quarto conteiner. */
+        div.conteiner3{
+
+            background-color: lightsalmon;
+            height: 400px;
+
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: flex-start;
+
+            }
+
+        div.item3{
+
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        /*
+        
+            inherit e auto = Configuração padrão do conteiner pai.
+
+        */
+
+        div#io1{
+
+            align-self: inherit;
+
+        }
+
+        div#io2{
+
+            align-self: auto;
+
+        }
+
+        div#io3{
+
+            align-self: flex-end;
+
+        }
+
+        div#io4{
+
+            
+
+        }
+
+        div#io5{
+
+            align-self: center;
+
+        }
+
+        div#io6{
+
+            
+
+        }
+
+        div#io7{
+
+            align-self: stretch;
+
+        }
+
+        /* Quinto conteiner. */
+        div.conteiner4{
+
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;
+
+        }
+
+        div.item4{
+
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+
+            flex-basis: 150px;
+
+        }
+
+        /* Quinto conteiner. */
+        div.conteiner5{
+
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;
+
+        }
+
+        div.item5{
+
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+
+            flex-basis: 250px;
+            flex-shrink: 0;
+            flex-grow: 1;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../../../Módulo 4/Aulas/Aula 109 - Tela de login/ex00109.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 109 - Tela de login</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 111 - Exercício Prático com FlexBox/ex0111.html">  &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt; Aula 111 - Exercício Prático com FlexBox</span></a>
+    </div>
+    
+    <h1>Flexbox</h1>
+
+    <h2>Primeiro conteiner</h2>
+
+    <div class="conteiner">
+
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+
+    </div>
+
+    <br>
+
+    <h2>Segundo conteiner</h2>
+
+    <div class="conteiner1">
+
+        <div class="item1">Exemplo de bloco A</div>
+
+    </div>
+
+    <br>
+
+    <h2>Terceiro conteiner</h2>
+
+    <div class="conteiner2">
+
+        <div class="item2" id="i1">A</div>
+        <div class="item2" id="i2">B</div>
+        <div class="item2" id="i3">C</div>
+        <div class="item2" id="i4">D</div>
+        <div class="item2" id="i5">E</div>
+        <div class="item2" id="i6">F</div>
+        <div class="item2" id="i7">G</div>
+
+    </div>
+
+    <br>
+
+    <h2>Quarto conteiner</h2>
+
+    <div class="conteiner3">
+
+        <div class="item3" id="io1">A</div>
+        <div class="item3" id="io2">B</div>
+        <div class="item3" id="io3">C</div>
+        <div class="item3" id="io4">D</div>
+        <div class="item3" id="io5">E</div>
+        <div class="item3" id="io6">F</div>
+        <div class="item3" id="io7">G</div>
+
+    </div>
+
+    <br>
+
+    <h2>Quinto conteiner</h2>
+
+    <div class="conteiner4">
+
+        <div class="item4">A</div>
+        <div class="item4">Outro conteúdo</div>
+        <div class="item4">C</div>
+        <div class="item4">Contéudo um pouco maior</div>
+        <div class="item4">E</div>
+        <div class="item4">Contéudo maior ainda que vai ocupar mais espaço</div>
+        <div class="item4">G</div>
+
+    </div>
+
+    <br>
+    <h2>Sexto conteiner</h2>
+
+    <div class="conteiner5">
+
+        <div class="item5">A</div>
+        <div class="item5">B</div>
+        <div class="item5">C</div>
+
+    </div>
+
+</body>
+</html>

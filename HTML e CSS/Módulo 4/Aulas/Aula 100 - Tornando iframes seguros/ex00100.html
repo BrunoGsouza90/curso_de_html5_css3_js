@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tornando iframes seguros</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        iframe#tela {
+
+            width: 95vw;
+            border: 2px solid black;
+            height: 400px;
+
+        } 
+
+    </style>
+
+</head>
+
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 99 - Contéudo no iframe por código/ex0099.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 99 - Contéudo no iframe por código</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 101 - Iframes melhores/ex00101.html">  &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt; Aula 101 - Iframes melhores</span></a>
+    </div>
+
+    <h1>Tornando iframes seguros</h1>
+
+    <ul>
+
+        <li><a href="Páginas Extras/pagina001.html" target="frame">Primeira página</a></li>
+        <li><a href="Páginas Extras/pagina005.html" target="frame">Segunda página</a></li>
+
+    </ul>
+
+    <!-- allow-same-origin - Permiti que o iframe trate a página exíbida como se fosse da mesma origem, dóminio, protocolo e porta. -->
+
+    <!-- allow-forms - Permiti que o iframe submeta todos os formulários das páginas exíbidas. -->
+
+    <!-- allow-scripts - Permiti a execução de scripts das páginas exíbidas no iframe porém não permiti que esses scripts interfiram no DOM ( Document Object Model ) da página principal. -->
+
+    <!-- allow-popups - Não permiti que as ancorás das páginas exíbidas abram novas janelas. -->
+
+    <!-- allow-modals - Não permiti que as caixas de diálogo como alert, prompt e confirm sejam abertas nas páginas exíbidas. -->
+
+    <!-- O atributo "referrerpolicy" controla quais informações da página original serão poderão influenciar na página exíbida no iframe. -->
+
+    <!-- no-referrer - Não envia nenhuma informação da página principal para a página exíbida. -->
+    <iframe sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer" id="tela" name="frame" src="">
+
+        <p>Infelizmente seu navegador não é compatível com  isso!</p>
+        
+    </iframe>
+
+</body>
+</html>

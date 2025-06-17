@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Hover, Focus e outros estados</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+
+    <main class="m-8">
+        
+        <div class="p-5 mb-10"><a class="mb-10 p-5 bg-blue-200 w-44 text-center text-xl font-serif cursor-pointer text-gray-800 font-medium border-2 border-blue-300 rounded-lg" target="_blank" href="https://tailwindcss.com/docs/hover-focus-and-other-states">Documentação Oficial</a></div>
+            
+        <!-- Para adicionar Focus ao entrar no botão utilize
+                o "hover" .-->
+        <button class="
+        bg-red-600
+        hover:bg-red-200
+        ">
+            Botão com focus ao entrar
+        </button>
+
+        <br><br>
+
+        <!-- Para alterar nas tabelas as linhas de cor utilize
+                "even" e "odd" .-->
+        <table>
+            <thead>
+                <tr class="bg-red-200">
+                    <th class="p-2 border-2 border-green-200">Acomodações</th>
+                    <th class="p-2 border-2 border-green-200">Quartos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="even:bg-white odd:bg-gray-600">
+                    <td class="p-2 border-2 border-green-200">Casa</td>
+                    <td class="p-2 border-2 border-green-200">4 Quartos</td>
+                </tr>
+                <tr class="even:bg-white odd:bg-gray-600">
+                    <td class="p-2 border-2 border-green-200">Apartamento</td>
+                    <td class="p-2 border-2 border-green-200">1 Quarto</td>
+                </tr>
+                <tr class="even:bg-white odd:bg-gray-600">
+                    <td class="p-2 border-2 border-green-200">Hotel</td>
+                    <td class="p-2 border-2 border-green-200">2 Quartos</td>
+                </tr>
+                <tr class="even:bg-white odd:bg-gray-600">
+                    <td class="p-2 border-2 border-green-200">Motel</td>
+                    <td class="p-2 border-2 border-green-200">3 Quartos</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <!-- Aplicando o Hover em situações onde o botão preciso ser ativado. -->
+        <button class="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-blue-700">
+            Botão com focus ao entrar e ao clicar
+        </button>
+
+        <br><br>
+
+        <!-- Exemplificando o uso de grupos aninhados. Onde é possível estilizar
+                listas com hover. -->
+        <ul role="list">
+            <li class="group/item even:bg-red-50 odd:bg-gray-200">
+                <!--Posso colocar imagem aqui.-->
+                <div class="p-4">
+                    <h1 class="text-4xl">Python</h1>
+                    <p>É uma ótima linguagem de progamação</p>
+                </div>
+                <a class="group/edit invisible group-hover/item:visible hover:bg-slate-200 p-2" href="tel:1234567890">
+                    <div class="rounded-lg bg-blue-300 w-1/6 ml-4 py-4 -mt-6 text-center font-bold font-serif">
+                        <span class="group-hover/edit:text-gray-700">Clique aqui para estudar</span>
+                        <p>&#x1F4DA;&#x1F4DA;&#x1F4DA;</p>
+                    </div>
+                </a>
+            </li>
+            <li class="group/item even:bg-red-50 odd:bg-gray-200">
+                <!--Posso colocar imagem aqui.-->
+                <div class="p-4">
+                    <h1 class="text-4xl">JavaScript</h1>
+                    <p>É uma ótima linguagem de progamação</p>
+                </div>
+                <a class="group/edit invisible group-hover/item:visible hover:bg-slate-200 p-2" href="tel:1234567890">
+                    <div class="rounded-lg bg-blue-300 w-1/6 ml-4 py-4 -mt-6 text-center font-bold font-serif">
+                        <span class="group-hover/edit:text-gray-700">Clique aqui para estudar</span>
+                        <p>&#x1F4DA;&#x1F4DA;&#x1F4DA;</p>
+                    </div>
+                </a>
+            </li>
+            <li class="group/item even:bg-red-50 odd:bg-gray-200">
+                <!--Posso colocar imagem aqui.-->
+                <div class="p-4">
+                    <h1 class="text-4xl">C++</h1>
+                    <p>É uma ótima linguagem de progamação</p>
+                </div>
+                <a class="group/edit invisible group-hover/item:visible hover:bg-slate-200 p-2" href="tel:1234567890">
+                    <div class="rounded-lg bg-blue-300 w-1/6 ml-4 py-4 -mt-6 text-center font-bold font-serif">
+                        <span class="group-hover/edit:text-gray-700">Clique aqui para estudar</span>
+                        <p>&#x1F4DA;&#x1F4DA;&#x1F4DA;</p>
+                    </div>
+                </a>
+            </li>
+            <li class="group/item even:bg-red-50 odd:bg-gray-200">
+                <!--Posso colocar imagem aqui.-->
+                <div class="p-4">
+                    <h1 class="text-4xl">Ruby</h1>
+                    <p>É uma ótima linguagem de progamação</p>
+                </div>
+                <a class="group/edit invisible group-hover/item:visible hover:bg-slate-200 p-2" href="tel:1234567890">
+                    <div class="rounded-lg bg-blue-300 w-1/6 ml-4 py-4 -mt-6 text-center font-bold font-serif">
+                        <span class="group-hover/edit:text-gray-700">Clique aqui para estudar</span>
+                        <p>&#x1F4DA;&#x1F4DA;&#x1F4DA;</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <br>
+
+        <!-- Aplicando estilos e mensagens em checkbox onde as mensagens
+                são ativas.-->
+        <fieldset class="border-2 border-black">
+            <legend class="text-lg font-semibold">Testando alternação de mensagem em Tailwind</legend>
+        
+            <input type="radio" id="primeiro" class="peer/primeiro" name="status" checked>
+            <label for="primeiro" class="peer-checked/primeiro:text-sky-500">Primeiro</label>
+        
+            <input type="radio" id="segundo" class="peer/segundo" name="status">
+            <label for="segundo" class="peer-checked/segundo:text-sky-500">Segundo</label>
+            <input type="radio" id="terceiro" class="peer/terceiro" name="status">
+            <label for="terceiro" class="peer-checked/terceiro:text-sky-500">Terceiro</label>
+        
+            <div id="msg_primeiro" class="hidden peer-checked/primeiro:block p-4 text-green-600">Primeiro botão ativo.</div>
+            <div id="msg_segundo" class="hidden peer-checked/segundo:block p-4 text-green-600">Segundo botão ativo.</div>
+            <div id="msg_terceiro" class="hidden peer-checked/terceiro:block p-4 text-green-600">Terceiro botão ativo.</div>
+        </fieldset>
+
+        <br>
+        
+        <!-- Aplicando estilos em grupos de uma lista.-->
+        <div>
+            <h2>Categories<h2>
+            <ul class="*:rounded-full *:border *:border-sky-100 *:bg-sky-50 *:px-2 *:py-0.5 dark:text-sky-300 dark:*:border-sky-500/15 dark:*:bg-sky-500/10 *:mt-3 w-1/6 *:text-center">
+                <li>Sales</li>
+                <li>Marketing</li>
+                <li>SEO</li>
+            </ul>
+        </div>
+
+        <br>
+
+        <!-- Criação de uma lista de check personalizada usando checked.-->
+        <div class="w-1/4 ">
+            <label name="check" for="google">
+                <div class="p-4 bg-gray-200 rounded-lg has-[:checked]:bg-blue-100 has-[:checked]:border has-[:checked]:border-blue-500">
+                    <label for="google">Google Pay</label>
+                    <input name="check" id="google" value="google" type="radio" class="box-content h-1.5 w-1.5 appearance-none rounded-full border-[5px] border-white bg-white bg-clip-padding outline-none ring-1 ring-gray-950/10 checked:border-indigo-500 checked:ring-indigo-500 flex ml-auto -mt-4" checked="">
+                </div>
+            </label>
+            <label name="check" for="apple">
+                <div class="p-4 bg-gray-200 rounded-lg has-[:checked]:bg-blue-100 has-[:checked]:border has-[:checked]:border-blue-500">
+                    <label for="apple">Apple Pay</label>
+                    <input name="check" id="apple" value="google" type="radio" class="box-content h-1.5 w-1.5 appearance-none rounded-full border-[5px] border-white bg-white bg-clip-padding outline-none ring-1 ring-gray-950/10 checked:border-indigo-500 checked:ring-indigo-500 flex ml-auto -mt-4">
+                </div>
+            </label>
+            <label name="check" for="credito">
+                <div class="p-4 bg-gray-200 rounded-lg has-[:checked]:bg-blue-100 has-[:checked]:border has-[:checked]:border-blue-500">
+                    <label for="credito">Cartão de Crédito</label>
+                    <input name="check" id="credito" value="credito" type="radio" class="box-content h-1.5 w-1.5 appearance-none rounded-full border-[5px] border-white bg-white bg-clip-padding outline-none ring-1 ring-gray-950/10 checked:border-indigo-500 checked:ring-indigo-500 flex ml-auto -mt-4">
+                </div>
+            </label>
+        </div>
+
+        <br>
+
+        <!-- Exemplo de checkbox com textos dentro.-->
+        <div>
+            <label class="peer">
+            <input type="checkbox" name="todo[1]" checked />
+                Para sumir com texto Clique no checkbox
+            </label>
+            <p class="peer-has-[:checked]:hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem, error. Officiis dolorum impedit modi consectetur
+                    ullam temporibus ipsam pariatur rem sequi accusantium?
+                    Numquam, atque ad sint odio minima neque voluptate?
+            </p>
+        </div>
+    
+        <div>
+            <label class="peer ...">
+            <input type="checkbox" name="todo[2]" checked />
+            Para sumir com texto Clique no checkbox
+            </label>
+            <p class="peer-has-[:checked]:hidden">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur 
+            sapiente officia animi, a repellat, eius pariatur tempore eveniet magnam 
+            nemo quasi alias ullam possimus consequuntur nihil, ipsam iusto cumque 
+            minus!
+            </p>
+        </div>
+    
+        <div>
+            <label class="peer">
+            <input type="checkbox" name="todo[3]" checked />
+            Para sumir com texto Clique no checkbox
+            </label>
+            <p class="peer-has-[:checked]:hidden">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis 
+            vitae, provident tenetur quo sequi velit, sapiente impedit molestiae 
+            rerum ad non, explicabo itaque! Ratione tenetur voluptas recusandae esse 
+            dolor veniam.
+            </p>
+        </div>
+        
+        <br>
+
+        <!-- Neste exemplo atuamos de forma contrária. Aqui o texto aparece
+                quando checkbox está ativo. -->
+        <div class="space-y-4">
+
+            <div>
+                <input type="checkbox" id="checkbox" class="peer form-checkbox" />
+                <label for="checkbox">Clique na checkbox para mostrar ou ocultar o texto</label>
+                
+                <p class="hidden peer-checked:block">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                    vitae, provident tenetur quo sequi velit, sapiente impedit molestiae
+                    rerum ad non, explicabo itaque! Ratione tenetur voluptas recusandae esse
+                    dolor veniam.
+                </p>
+            </div>
+
+            <div>
+                <input type="checkbox" id="checkbox" class="peer form-checkbox" />
+                <label for="checkbox">Clique na checkbox para mostrar ou ocultar o texto</label>
+                
+                <p class="hidden peer-checked:block">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                    vitae, provident tenetur quo sequi velit, sapiente impedit molestiae
+                    rerum ad non, explicabo itaque! Ratione tenetur voluptas recusandae esse
+                    dolor veniam.
+                </p>
+            </div>
+
+            <div>
+                <input type="checkbox" id="checkbox" class="peer form-checkbox" />
+                <label for="checkbox">Clique na checkbox para mostrar ou ocultar o texto</label>
+                
+                <p class="hidden peer-checked:block">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                    vitae, provident tenetur quo sequi velit, sapiente impedit molestiae
+                    rerum ad non, explicabo itaque! Ratione tenetur voluptas recusandae esse
+                    dolor veniam.
+                </p>
+            </div>
+
+        </div>
+
+        <br>
+
+        <!-- Aplicando mensagens para campos obrigatórios.-->
+        <form class="space-y-4">
+            <div>
+                <label for="username" class="block after:content-['*'] after:ml-0.5 after:text-red-500">Usuário:</label>
+                <input id="username" name="username" type="text" class="peer border-2 border-black w-full" required />
+                <div class="hidden peer-invalid:block text-sm text-gray-400">Esse campo é obrigatório <sup>*<sup></sup></div>
+            </div>
+        
+            <div>
+                <label for="password" class="block after:content-['*'] after:ml-0.5 after:text-red-500">Senha:</label>
+                <input id="password" name="password" type="password" class="peer border-2 border-black w-full" required />
+                <div class="hidden peer-invalid:block text-sm text-gray-400">Esse campo é obrigatório <sup>*<sup></sup></div>
+            </div>
+        
+            <button type="submit" class="border-2 border-black p-2 rounded-full">Login</button>
+        </form>
+
+        <br>
+
+        <!-- Estilo de marcação interresante. -->
+        <blockquote class="text-2xl font-semibold italic text-center text-slate-900">
+            Você faz parte do
+            <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+              <span class="relative text-white">SELECT * FROM progamadores</span>
+            </span>
+            do mundo da tecnologia.
+        </blockquote>
+
+        <br>
+
+        <!-- Outra maneira de aplicar o recurso de marcação. -->
+        <blockquote class="text-2xl font-semibold italic text-center text-slate-900">
+            Você faz parte do
+            <span class="relative">
+              <span class="block absolute -inset-1 -skew-y-3 bg-pink-500" aria-hidden="true"></span>
+              <span class="relative text-white">SELECT * FROM progamadores</span>
+            </span>
+            &nbsp;do mundo da tecnologia.
+        </blockquote>
+
+        <br>
+
+        <!-- Exemplo de área de pesquisa utilizando placeholders estilizados. -->
+        <label class="relative block">
+            <span class="sr-only">Search</span>
+            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+              <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><!-- ... --></svg>
+            </span>
+            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search"/>
+          </label>
+
+        <br>
+
+        <!-- Botão de entrada de arquivo estilizado. -->
+        <form class="flex items-center space-x-6">
+              <input type="file" class="block w-full text-sm text-slate-500
+                file:mr-4 file:py-2 file:px-4
+                file:rounded-full file:border-0
+                file:text-sm file:font-semibold
+                file:bg-violet-50 file:text-violet-700
+                hover:file:bg-violet-100
+              "/>
+            </label>
+        </form>
+
+        <br>
+
+        <!-- Listas estilizadas. -->
+        <ul role="list" class="marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-600">
+            <li>5 cups chopped Porcini mushrooms</li>
+            <li>1/2 cup of olive oil</li>
+            <li>3lb of celery</li>
+          </ul>
+
+        <br>
+
+        <!-- Estilizando seletores. -->
+        <div class="selection:bg-fuchsia-300 selection:text-fuchsia-900">
+            <p>
+              So I started to walk into the water. I won't lie to you boys, I was
+              terrified. But I pressed on, and as I made my way past the breakers
+              a strange calm came over me. I don't know if it was divine intervention
+              or the kinship of all living things but I tell you Jerry at that moment,
+              I <em>was</em> a marine biologist.
+            </p>
+        </div>
+
+        <br>
+
+        <!-- Texto com a primeira letra maior e destacada. -->
+        <p class="first-line:uppercase first-line:tracking-widest
+        first-letter:text-7xl first-letter:font-bold first-letter:text-black
+        first-letter:mr-3 first-letter:float-left
+        ">
+        Well, let me tell you something, funny boy. Y'know that little stamp, the one
+        that says "New York Public Library"? Well that may not mean anything to you,
+        but that means a lot to me. One whole hell of a lot.
+        </p>
+
+    </main>
+
+</body>
+</html>
