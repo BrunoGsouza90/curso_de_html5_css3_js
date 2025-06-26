@@ -8,3 +8,15 @@
   text-align: center;
 
 }
+
+.status_verde {
+
+  color: green;
+
+}
+
+.status_vermelho {
+
+  color: red;
+
+}
