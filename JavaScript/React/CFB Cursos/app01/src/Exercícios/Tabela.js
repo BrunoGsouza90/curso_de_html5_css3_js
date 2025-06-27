@@ -1,5 +1,5 @@
 import React from 'react'
-import "./style.css"
+import "./css/Tabela.css"
 
 class Tabela extends React.Component {
 
@@ -153,11 +153,11 @@ class Tabela extends React.Component {
 
                         <div id="div_label">
 
-                            <label for="nome">Nome: </label>
-                            <label for="nome">Sobrenome: </label>
-                            <label for="nome">Idade: </label>
-                            <label for="nome">Telefone: </label>
-                            <label for="nome">Email: </label>
+                            <label htmlFor="nome">Nome: </label>
+                            <label htmlFor="nome">Sobrenome: </label>
+                            <label htmlFor="nome">Idade: </label>
+                            <label htmlFor="nome">Telefone: </label>
+                            <label htmlFor="nome">Email: </label>
 
                         </div>
 

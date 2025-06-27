@@ -9,49 +9,79 @@ const host = "127.0.0.1"
 
 const server = http.createServer((request, response) => {
 
-    response.status = 200
+    let status = 200
 
-    // Aqui estamos lendo um arquivo.
-    fs.readFile('index.html', (error, file) => {
+    if(request.url == "/") {
 
-        if(error){
+        // Aqui estamos lendo um arquivo.
+        fs.readFile('index.html', (error, file) => {
 
-            throw error
+            if(error) {
 
-        } else {
+                throw error
 
-            response.writeHead(200, {
+            } else {
 
-                "Content-Type" : "text/html"
+                response.writeHead(status, {
+
+                    "Content-Type" : "text/html"
+            
+                })
         
-            })
-    
-            response.write(file)
-    
-            return response.end()
+                response.write(file)
+        
+                return response.end()
 
-        }
+            }
 
-    })
+        })
 
-    // Aqui estamos criando um arquivo.
-    let conteudo = "Bruno, Lucas, Eduardo"
+        // Aqui estamos criando um arquivo.
+        let conteudo = "Bruno, Lucas, Eduardo"
 
-    fs.appendFile('teste.txt', conteudo, (error) => {
+        fs.appendFile('teste.txt', conteudo, (error) => {
 
-        if(error){
+            if(error) {
 
-            throw error
+                throw error
 
-        } else {
+            } else {
 
-            console.log("Arquivo criado com sucesso!")
+                console.log("Arquivo criado com sucesso!")
 
-        }
+            }
 
-    })
+        })
 
-    fs.
+    }
+
+    if(request.url == "/contato") {
+
+        fs.readFile("contato.html", (error, file) => {
+
+            if(error) {
+
+                throw error
+
+            } else {
+
+                response.writeHead(status, {
+
+                    "Content-Type": "text/html"
+
+                })
+
+                response.write(file)
+
+                console.log("Página carregada com sucesso")
+
+                return response.end()
+
+            }
+
+        })
+
+    }
 
 })
 
