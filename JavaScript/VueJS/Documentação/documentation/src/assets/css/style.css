@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+* {
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+.title {
+
+    margin: 20px 0px;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+.title-weigth {
+
+    font-weight: 800;
+
+}
+
+/* SintaxeDoModelo */
+
+.atributo {
+
+    padding: 20px;
+
+}
+
+#atributo {
+
+    background-color: lightcoral;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
