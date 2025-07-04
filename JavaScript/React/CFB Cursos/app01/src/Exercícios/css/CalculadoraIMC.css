@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+#main {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 30px;
+
+}
+
+#resultado {
+
+    text-align: center;
+
+}
+
+#paragrafo {
+
+    text-align: center;
+    font: normal 1.2em Arial;
+
+}
+
+#div_botao {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 0px 50px;
+
+}
+
+#calcular {
+
+    background-color: rgb(77, 248, 61);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font: 400 1em cursive;
+    cursor: pointer;
+
+    transition:
+    transform 0.4s ease-in-out,
+    background-color 0.4s ease-in-out;
+
+}
+
+#calcular:hover {
+
+    background-color: rgb(182, 252, 176);
+    transform: scale(1.1);
+
+}

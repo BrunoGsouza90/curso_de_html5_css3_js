@@ -49,9 +49,9 @@ rotas.get('/:cursoid', (request, response) => {
 
     const curso = request.params.cursoid
 
-    const cursoInfo = cursosInfo.find(i => i.curso.toLocaleLowerCase() == curso.toLocaleLowerCase())
+    const cursoInfo = cursosInfo.find((i) => i.curso.toLocaleLowerCase() == curso.toLocaleLowerCase())
 
-    if(!cursoInfo){
+    if(cursoInfo == undefined){
 
         response.status(404).json({
 

@@ -10,12 +10,6 @@ const app = express()
 
 app.use("/", rotas)
 
-app.get("*", (request, response) => {
-
-    response.send("CFB Cursos")
-
-})
-
 app.listen(porta, host, () => {
 
     console.log("Servidor rodando!")
