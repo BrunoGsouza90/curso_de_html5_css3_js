@@ -1,12 +1,16 @@
 <script>
 
+  import { nextTick } from "vue";
+
   import SintaxeDoModelo from "./components/Aulas/SintaxeDoModelo.vue";
+  import PropriedadesCalculadas from "./components/Aulas/PropriedadesCalculadas.vue";
 
   export default {
 
     components: {
 
-      
+      SintaxeDoModelo,
+      PropriedadesCalculadas 
 
     },
 
@@ -17,6 +21,25 @@
         titulo: "<span class='title-weigth'>\"Documentação Oficial\"</span>"
 
       }
+
+    },
+
+    methods: {
+
+      async mostrarConteudo() {
+
+        this.$refs.mainContent.style.display = "block";
+        this.$refs.mainLoad.style.display = "none";
+
+        await nextTick;
+
+      }
+
+    },
+
+    mounted() {
+
+      setTimeout(this.mostrarConteudo, 2000);
 
     }
 
@@ -34,7 +57,7 @@
 
   </header>
 
-  <main>
+  <main id="main_content" ref="mainContent">
 
     <h1 class="title">
       
@@ -43,9 +66,23 @@
     
     </h1>
 
-    <h2>Aula 1 - Sintaxe do Modelo</h2>
+    <h2 class="ml">Aula 1 - Sintaxe do Modelo</h2>
 
     <SintaxeDoModelo/>
+
+    <h2 class="ml">Aula 2 - Propriedades Calculadas</h2>
+
+    <PropriedadesCalculadas/>
+
+  </main>
+
+  <main id="main_load" ref="mainLoad">
+
+    <h1 class="title">Carregando...</h1>
+
+    <p>Bem-Vindo aos meus estudos sobre VueJS com a Documentação Oficial.</p>
+
+    <div class="spinner"></div>
 
   </main>
 
@@ -56,3 +93,56 @@
   </footer>
 
 </template>
+
+<style scoped>
+
+  .ml {
+
+    margin: 20px;
+
+  }
+
+  #main_content {
+
+    display: none;
+
+  }
+
+  #main_load {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+  }
+
+  .spinner {
+
+    width: 100px;
+    height: 100px;
+    border: 4px solid #ccc;
+    border-top-color: #42b983;
+    border-radius: 50%;
+    animation: girar 1s linear infinite;
+    margin: 20px auto;
+
+  }
+
+  @keyframes girar {
+
+    from {
+
+      transform: rotate(0deg);
+    }
+
+    to {
+
+     transform: rotate(360deg);
+
+    }
+
+  }
+
+</style>
