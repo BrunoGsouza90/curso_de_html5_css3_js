@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+* {
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+/* Página Principal - index.html */
+div#app > h1 {
+
+    margin: 20px 0px;
+    font: 500 2.2em cursive;
+    text-align: center;
+
+}
