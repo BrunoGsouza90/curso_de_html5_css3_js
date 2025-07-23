@@ -74,6 +74,8 @@ button:hover {
 
 }
 
+/* Propriedades Calculadas */
+
 .div_resultado {
 
     margin-left: 50px;
@@ -94,6 +96,7 @@ button:hover {
 
     display: flex;
     flex-direction: column;
+    margin: 0px 0px 40px 0px;
 
 }
 
@@ -132,8 +135,118 @@ label {
 
 }
 
+.input_list_1 {
+
+    margin: 17px 10px 0px 0px;
+
+}
+
 .input_list {
 
-    margin: 0px 0px 0px 30px;
+    margin: 22px 10px 0px 0px;
+
+}
+
+.input_label {
+
+    margin: 15px 0px 0px 0px;
+
+}
+
+#resultado_sucesso {
+
+    margin-left: 50px;
+    padding: 20px 30px;
+    font: 500 italic 1.2em cursive;
+    color: black;
+    background-color: lightgreen;
+    border-radius: 5px;
+
+}
+
+#resultado_erro {
+
+    margin-left: 50px;
+    padding: 20px 30px;
+    font: 500 italic 1.2em cursive;
+    color: black;
+    background-color: lightcoral;
+    border-radius: 5px;
+
+}
+
+/* Renderização Condicional. */
+
+.div_nota {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0px 10px -20px;
+
+}
+
+.div_opcao_nota {
+
+    display: flex;
+
+}
+
+.div_item {
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 6px;
+
+}
+
+.input_nota {
+
+    margin: auto;
+    margin-top: 10px;
+    font: 500 italic 1.1em Arial;
+    padding: 10px 20px;
+    text-align: center;
+
+}
+
+.resposta_nota {
+
+    font: 600 italic 1.3em cursive;
+    text-align: center;
+
+}
+
+.div_show {
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+}
+
+#paragrafo_show {
+
+    display: flex;
+    align-items: center;
+    font: 600 italic 1.5em cursive;
+    color: darkgreen;
+
+}
+
+/* Renderização de Lista. */
+
+#div_carros {
+
+    margin: 50px;
+
+}
+
+/* Usando Props. */
+
+.paragrafo_props {
+
+    margin: 20px 0px 0px 50px;
 
 }

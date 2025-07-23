@@ -4,13 +4,19 @@
 
   import SintaxeDoModelo from "./components/Aulas/SintaxeDoModelo.vue";
   import PropriedadesCalculadas from "./components/Aulas/PropriedadesCalculadas.vue";
+  import RenderizacaoCondicional from "./components/Aulas/RenderizacaoCondicional.vue";
+  import RenderizacaoDeLista from "./components/Aulas/RenderizacaoDeLista.vue";
+  import UsandoProps from "./components/Aulas/UsandoProps.vue";
 
   export default {
 
     components: {
 
       SintaxeDoModelo,
-      PropriedadesCalculadas 
+      PropriedadesCalculadas,
+      RenderizacaoCondicional,
+      RenderizacaoDeLista,
+      UsandoProps
 
     },
 
@@ -18,6 +24,9 @@
 
       return {
 
+        nome: "Bruno",
+        sobrenome: "Gonçalves de Souza",
+        idade: 25,
         titulo: "<span class='title-weigth'>\"Documentação Oficial\"</span>"
 
       }
@@ -32,6 +41,12 @@
         this.$refs.mainLoad.style.display = "none";
 
         await nextTick;
+
+      },
+
+      mensagemDoComponenteFilho(mensagem) {
+
+        window.alert(mensagem)
 
       }
 
@@ -73,6 +88,18 @@
     <h2 class="ml">Aula 2 - Propriedades Calculadas</h2>
 
     <PropriedadesCalculadas/>
+
+    <h2 class="ml">Aula 3 - Renderização Condicional</h2>
+
+    <RenderizacaoCondicional/>
+
+    <h2 class="ml">Aula 4 - Renderização de Lista</h2>
+
+    <RenderizacaoDeLista/>
+
+    <h2 class="ml">Aula 5 - Usando Props</h2>
+
+    <UsandoProps :nome="nome" :sobrenome="sobrenome" :idade="idade" @avisarComponentePai="mensagemDoComponenteFilho"/>
 
   </main>
 

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+
+    <style>
+
+        h2 {
+
+            margin-top: 50px;
+
+        }
+
+        #container {
+
+            width: 500px;
+            height: 500px;
+            border: 5px solid green;
+            border-radius: 20px;
+            padding: 20px;
+
+            /* Determinamos o Display para o modo Grid. */
+            display: grid;
+
+            /* Definimos 3 colunas, com o tamanho automático. */
+            grid-template-columns: auto auto auto;
+
+            /* Definimos as 3 primeiras linhas como tamanho automático. Sendo esse o padrão. */
+            grid-template-rows: auto auto auto;
+
+            /* Definimos a espaçamento entre os items. */
+            gap: 20px;
+
+        }
+
+        .item {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid black;
+            font-weight: bold;
+
+        }
+
+        #container2 {
+
+            width: 500px;
+            height: 500px;
+            border: 5px solid green;
+            border-radius: 20px;
+            padding: 20px;
+
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+
+            /* Alinhamos os items no centro eixo vertical. Aqui ele espalha os items em todo o elemento pai.*/
+            align-items: center;
+
+            /* Alinhamos os items no centro eixo horizontal. Aqui ele espalha o conteúdo em todo o elemento pai.*/
+            justify-items: center;
+    
+        }
+
+        .item2 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid black;
+            font-weight: bold;
+
+        }
+
+        #container3 {
+
+            width: 500px;
+            height: 500px;
+            border: 5px solid green;
+            border-radius: 20px;
+            padding: 20px;
+
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+
+            /* Alinhamos os items no centro eixo vertical. Aqui ele comprimi o conteúdo de acordo o espaçamento indicado pelo gap apenas.*/
+            align-content: center;
+
+            /* Alinhamos os items no centro eixo horizontal. Aqui ele comprimi o conteúdo de acordo o espaçamento indicado pelo gap apenas.*/
+            justify-content: center;
+    
+        }
+
+        .item3 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid black;
+            font-weight: bold;
+
+        }
+
+        #container4 {
+
+            width: 500px;
+            height: 500px;
+            border: 5px solid green;
+            border-radius: 20px;
+            padding: 20px;
+
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+
+            gap: 20px;
+
+            /* No "grid-template-rows" definimos os tamanhos das 2 primeiras colunas apenas. Agora definimos aqui o tamanho das próximas colunas. */
+            grid-auto-rows: 50px;
+
+            /* No "grid-template-rows" definimos os tamanhos das 2 primeiras colunas apenas. Agora definimos aqui o tamanho das próximas colunas. */
+            grid-auto-columns: 50px;
+    
+        }
+
+        .item4 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid black;
+            font-weight: bold;
+
+        }
+
+        #container5 {
+
+            width: 500px;
+            height: 500px;
+            border: 5px solid green;
+            border-radius: 20px;
+            padding: 20px;
+
+            display: grid;
+
+            /* Definimos a função de repetição. */
+            grid-template-columns: repeat(3, auto);
+
+            /* Estamos trabalhando com frações. */
+            grid-template-rows: 1fr 3fr 1fr;
+
+            /* Trocamos a ordem de adição de linha para coluna. */
+            grid-auto-flow: column;
+
+            gap: 20px;
+    
+        }
+
+        .item5 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid black;
+            font-weight: bold;
+
+        }
+
+        #container6 {
+
+            width: 500px;
+            height: 500px;
+            border: 5px solid green;
+            border-radius: 20px;
+            padding: 20px;
+
+            display: grid;
+
+            /* Definimos um shorthand para ambos as definições de quantidade de linhas e colunas. */
+            grid-template: repeat(3, auto) / repeat(3, auto);
+
+            gap: 20px;
+    
+        }
+
+        .item6 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid black;
+            font-weight: bold;
+
+        }
+
+        #item1 {
+
+            /* Definimos em qual linha o item irá começar. */
+            grid-row-start: 1;
+
+            /* Definimos em qual linha o item irá terminar. */
+            grid-row-end: span 2;
+
+            /* Definimos em qual coluna o item irá começar. */
+            grid-column-start: 1;
+
+            /* Definimos em qual coluna o item irá terminar. */
+            grid-column-end: span 2;
+
+        }
+
+        #item7 {
+
+            /* Aplicamos um "shorthand" para definir as áreas de início e finalização das linhas e colunas do elemento. */
+            grid-row: 4 / span 2;
+            grid-column: 2 /span 2;
+
+        }
+
+        #container7 {
+
+            width: 500px;
+            height: 500px;
+            border: 5px solid green;
+            border-radius: 20px;
+            padding: 20px;
+
+            display: grid;
+
+            /* Definimos um shorthand para ambos as definições de quantidade de linhas e colunas. */
+            grid-template: repeat(3, auto) / repeat(3, auto);
+
+            gap: 20px;
+    
+        }
+
+        .item7 {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid black;
+            font-weight: bold;
+
+        }
+
+        #item1_1 {
+
+            grid-row: 1 / span 2;
+            grid-column: 1 / span 3;
+
+        }
+
+        #item1_2 {
+
+            grid-row: 3 / span 1;
+            grid-column: 1 / span 3;
+
+        }
+
+        #item1_3 {
+
+            grid-row: 4 / span 4;
+            grid-column: 1 / span 2;
+
+        }
+
+        #item1_4 {
+
+            grid-row: 4 / span 4;
+            grid-column: 3 / span 1;
+
+        }
+
+        #item1_5 {
+
+            grid-row: 8 / span 1;
+            grid-column: 1 / span 3;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div style="margin-bottom: 30px; display: flex; justify-content: space-between;">
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../Aula 111 - Exercício Prático com FlexBox/ex0111.html"><span style="font-weight: bold; font-size: 20pt;">&lt;&lt; Voltar</span>&nbsp;&nbsp;&nbsp;&nbsp;Aula 111 - Exercício Prático com FlexBox</a>
+        <a style="font-size: 13pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;" href="../">  &nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: bold; font-size: 20pt;">Avançar &gt;&gt; Aula 111 - Exercício Prático com FlexBox</span></a>
+    </div>
+    
+    <h1>Grid Layout</h1>
+
+    <h2>Container 1 - Definindo Colunas e Linhas.</h2>
+
+    <div id="container">
+
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+
+    </div>
+
+    <h2>Container 2 - Alinhando os Items.</h2>
+
+    <div id="container2">
+
+        <div class="item2">A</div>
+        <div class="item2">B</div>
+        <div class="item2">C</div>
+        <div class="item2">D</div>
+        <div class="item2">E</div>
+        <div class="item2">F</div>
+        <div class="item2">G</div>
+
+    </div>
+
+    <h2>Container 3 - Alinhando os Conteúdos.</h2>
+
+    <div id="container3">
+
+        <div class="item3">A</div>
+        <div class="item3">B</div>
+        <div class="item3">C</div>
+        <div class="item3">D</div>
+        <div class="item3">E</div>
+        <div class="item3">F</div>
+        <div class="item3">G</div>
+
+    </div>
+
+    <h2>Container 4 - Definindo o tamanho das próximas Linhas e Colunas.</h2>
+
+    <div id="container4">
+
+        <div class="item4">A</div>
+        <div class="item4">B</div>
+        <div class="item4">C</div>
+        <div class="item4">D</div>
+        <div class="item4">E</div>
+        <div class="item4">F</div>
+        <div class="item4">G</div>
+
+    </div>
+
+    <h2>Container 5 - Funções e Frações.</h2>
+
+    <div id="container5">
+
+        <div class="item5">A</div>
+        <div class="item5">B</div>
+        <div class="item5">C</div>
+        <div class="item5">D</div>
+        <div class="item5">E</div>
+        <div class="item5">F</div>
+        <div class="item5">G</div>
+
+    </div>
+
+    <h2>Container 6 - Propriedade de Items.</h2>
+
+    <div id="container6">
+
+        <div id="item1" class="item6">A</div>
+        <div id="item2" class="item6">B</div>
+        <div id="item3" class="item6">C</div>
+        <div id="item4" class="item6">D</div>
+        <div id="item5" class="item6">E</div>
+        <div id="item6" class="item6">F</div>
+        <div id="item7" class="item6">G</div>
+
+    </div>
+
+    <h2>Container 7 - Desafio.</h2>
+
+    <img src="Desafio.png" alt="Desafio">
+
+    <div id="container7">
+
+        <div id="item1_1" class="item7">A</div>
+        <div id="item1_2" class="item7">B</div>
+        <div id="item1_3" class="item7">C</div>
+        <div id="item1_4" class="item7">D</div>
+        <div id="item1_5" class="item7">E</div>
+
+    </div>
+
+</body>
+</html>
