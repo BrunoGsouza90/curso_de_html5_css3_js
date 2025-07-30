@@ -9,19 +9,19 @@ function desenhar(){
 
     if(px < 395 && py == 5){
 
-        px = px + 15
+        px = px + 1
 
     } else if (px == 395 && py < 395){
 
-        py = py + 15
+        py = py + 1
 
     } else if(px > 5 && py == 395){
 
-        px = px - 15
+        px = px - 1
 
     } else if(px == 5 && py > 5){
 
-        py = py - 15
+        py = py - 1
 
     }
 
@@ -34,7 +34,7 @@ function desenhar(){
     contexto.lineWidth = 10
 
     // Cor do contorno.
-    contexto.stokeStyle = "rgb(0, 0, 255)"
+    contexto.strokeStyle = "rgb(0, 0, 255)"
 
     contexto.strokeRect(px, py, 100, 100);
 

@@ -26,8 +26,8 @@ contexto.lineTo(250, 250)
 contexto.stroke()
 
 contexto.lineTo(350, 250)
+contexto.stroke()
 
 contexto.moveTo(500, 0)
 contexto.lineTo(350, 250)
-
 contexto.stroke()
