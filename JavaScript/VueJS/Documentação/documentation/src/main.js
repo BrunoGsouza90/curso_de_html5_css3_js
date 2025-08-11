@@ -15,4 +15,6 @@ app.config.errorHandler = (err, instance, info) => {
 
 app.component('BotaoAlerta', BotaoAlerta)
 
+app.provide("mensagemProvide", "Essa mensagem foi injetada no \"main.js\".")
+
 app.mount('#app')

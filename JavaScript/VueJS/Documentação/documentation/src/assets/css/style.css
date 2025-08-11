@@ -250,3 +250,11 @@ label {
     margin: 20px 0px 0px 50px;
 
 }
+
+/* Usando Slots. */
+
+.card {
+
+    padding: 30px;
+
+}

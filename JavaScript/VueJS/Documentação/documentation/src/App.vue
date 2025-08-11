@@ -7,6 +7,7 @@
   import RenderizacaoCondicional from "./components/Aulas/RenderizacaoCondicional.vue";
   import RenderizacaoDeLista from "./components/Aulas/RenderizacaoDeLista.vue";
   import UsandoProps from "./components/Aulas/UsandoProps.vue";
+  import ComponentesDeSlot from "./components/Aulas/ComponentesDeSlot.vue";
 
   export default {
 
@@ -16,7 +17,8 @@
       PropriedadesCalculadas,
       RenderizacaoCondicional,
       RenderizacaoDeLista,
-      UsandoProps
+      UsandoProps,
+      ComponentesDeSlot
 
     },
 
@@ -47,6 +49,12 @@
       mensagemDoComponenteFilho(mensagem) {
 
         window.alert(mensagem)
+
+      },
+
+      BotaoComponenteSlot() {
+
+        window.alert("Você clicou no botão de Componente de Slot!")
 
       }
 
@@ -101,6 +109,38 @@
 
     <UsandoProps :nome="nome" :sobrenome="sobrenome" :idade="idade" @avisarComponentePai="mensagemDoComponenteFilho"/>
 
+    <h2 class="ml">Aula 6 - Usando Slots</h2>
+
+    <ComponentesDeSlot>
+
+      <template #header>
+
+        <h1 class="slot">Slot Header</h1>
+
+      </template>
+
+      <template #main>
+
+        <h1>Slot Default</h1>
+        <p><strong>Variável "nome":</strong> {{ nome }}.</p>
+        <p><strong>Variável "sobrenome":</strong> {{ sobrenome }}.</p>
+
+      </template>
+
+      <template #footer>
+
+        <h1>Slot Footer</h1>
+
+      </template>
+
+      <template #default>
+
+        <button @click="BotaoComponenteSlot()" type="button">Componente de Slot</button>
+
+      </template>
+
+    </ComponentesDeSlot>
+
   </main>
 
   <main id="main_load" ref="mainLoad">
@@ -112,12 +152,6 @@
     <div class="spinner"></div>
 
   </main>
-
-  <footer>
-
-
-
-  </footer>
 
 </template>
 
