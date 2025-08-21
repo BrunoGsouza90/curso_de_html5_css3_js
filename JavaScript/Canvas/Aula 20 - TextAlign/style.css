@@ -1,0 +1,21 @@
+@charset "utf8";
+
+canvas#canvas{
+
+    border: 1px solid black;
+
+}
+
+p {
+
+    display: inline-block;
+    padding: 0px 0px 20px 100px;
+    font: italic 1.5em cursive;
+
+}
+
+span {
+
+    padding: 0px 0px 0px 10px;
+
+}
