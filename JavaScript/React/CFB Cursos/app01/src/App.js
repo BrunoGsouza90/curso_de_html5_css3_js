@@ -13,6 +13,12 @@ import CicloDeVida from './componentes/CicloDeVida.js'
 import Variaveis from './componentes/Variaveis.js'
 import Tabela from './Exercícios/Tabela.js'
 import { CalculadoraIMC } from './Exercícios/CalculadoraIMC.js'
+import ListarClientesApi from './componentes/ListarClientesApi.js'
+
+import { Routes, Route, Link } from 'react-router-dom'
+import Pagina1 from './Páginas/Pagina1.js'
+import Pagina2 from './Páginas/Pagina2.js'
+import Pagina3 from './Páginas/Pagina3.js'
 
 export default function App(){
 
@@ -135,6 +141,28 @@ export default function App(){
       <h2>Exercício 2 - CalculadoraIMC.</h2>
 
       <CalculadoraIMC></CalculadoraIMC>
+
+      <hr></hr>
+
+      <h2>Consumindo API:</h2>
+
+      <ListarClientesApi></ListarClientesApi>
+
+      <hr></hr>
+
+      <h2>Rotas:</h2>
+
+      <Routes>
+
+        <Route path="/pagina1" element={<Pagina1></Pagina1>}></Route>
+        <Route path="/pagina2" element={<Pagina2></Pagina2>}></Route>
+        <Route path="/pagina3" element={<Pagina3></Pagina3>}></Route>
+
+      </Routes>
+
+      <Link to="/pagina1">Página 1</Link>
+      <Link to="/pagina2">Página 2</Link>
+      <Link to="/pagina3">Página 3</Link>
 
       <hr></hr>
 
