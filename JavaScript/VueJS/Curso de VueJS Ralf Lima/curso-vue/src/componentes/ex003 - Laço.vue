@@ -13,6 +13,6 @@
 <script setup>
 
     /* Criação de uma váriavel recebendo uma lista. */
-    let nomes = ['Alice', 'Bruna', 'Caio', 'Daniel', 'Ellen']
+    let nomes = ['Alice', 'Bruna', 'Caio', 'Daniel', 'Ellen', 'Matheus']
 
 </script>
